@@ -1,0 +1,32 @@
+[
+  {
+    "name": "EventTask",
+    "desc": "A to do app with AI integrated to generate tasks based on user input.",
+    "image": "eventease",
+    "category": "basicweb",
+    "links": {
+      "view": "https://github.com/jigar-sable/PHP-Projects/tree/main/pblform#pbl-portal",
+      "code": "https://github.com/jigar-sable/PHP-Projects/tree/main/pblform"
+    }
+  },
+  {
+    "name": "Lost and Found",
+    "desc": "A blog like lost and found web application that allows students to report lost items and found them.",
+    "image": "lostandfound",
+    "category": "basicweb",
+    "links": {
+      "view": "https://jigar-sable.github.io/LinkList",
+      "code": "https://github.com/jigar-sable/LinkList"
+    }
+  },
+  {
+    "name": "Yelp Dataset Challenge",
+    "desc": "Generate and evaluate models that can be used to predict key attributes and the closure of a business.",
+    "image": "yelp",
+    "category": "basicweb",
+    "links": {
+      "view": "https://jigar-sable.github.io/JavaScript-Projects/api-projects/saas-jobs",
+      "code": "https://github.com/jigar-sable/JavaScript-Projects/tree/main/api-projects/saas-jobs"
+    }
+  }
+]
