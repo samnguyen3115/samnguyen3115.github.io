@@ -1,4 +1,4 @@
-.work {
+.project {
   background: transparent;
   border-radius: 0;
   box-shadow: none;
@@ -14,35 +14,36 @@
   margin-bottom: 50px;
   border: 3px solid rgb(255, 255, 255);
 }
-.work h2 {
+.project h2 {
   color: #fff;
   padding: 1rem;
 }
-.work .box-container {
+.project .box-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   margin: 2rem;
 }
-.work .box-container .box {
+.project .box-container .box {
   flex: 1 1 30rem;
   border-radius: 0;
   box-shadow: none;
   position: relative;
   overflow: hidden;
   height: 30rem;
+  width:30rem;
   border: 3px solid rgb(255, 255, 255);
 }
-.work .box-container .box img {
+.project .box-container .box img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   transition: 0.3s;
 }
-.work .box-container .box:hover img {
+.project .box-container .box:hover img {
   transform: scale(1.05);
 }
-.work .box-container .box .content {
+.project .box-container .box .content {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -56,7 +57,7 @@
   flex-direction: column;
   color: white;
 }
-.work .box-container .box .content .tag {
+.project .box-container .box .content .tag {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -67,28 +68,28 @@
   background: rgba(0, 0, 0, 0.832);
   color: white;
 }
-.work .box-container .box .content .tag h3 {
+.project .box-container .box .content .tag h3 {
   font-size: 2rem;
 }
-.work .box-container .box:hover .content {
+.project .box-container .box:hover .content {
   top: 25%;
 }
-.work .desc {
+.project .desc {
   margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.work .desc p {
+.project .desc p {
   font-size: 2rem;
 }
-.work .desc .btns {
+.project .desc .btns {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 2rem;
 }
-.work .desc .btns .btn {
+.project .desc .btns .btn {
   line-height: 0;
   display: inline;
   padding: 1.5rem 2.5rem;
@@ -98,15 +99,15 @@
   background: rgb(12, 12, 12);
   margin-right: 2rem;
 }
-.work .desc .btns .btn:hover {
+.project .desc .btns .btn:hover {
   background: #ffffff;
   color: black;
 }
-.work .viewall {
+.project .viewall {
   display: flex;
   justify-content: center;
 }
-.work .viewall .btn {
+.project .viewall .btn {
   position: relative;
   line-height: 0;
   padding: 1.6rem 3rem;
@@ -118,20 +119,20 @@
   box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
   text-align: center;
 }
-.work .viewall .btn span {
+.project .viewall .btn span {
   font-weight: 600;
   font-size: 1.7rem;
   font-family: 'Abel', sans-serif;
 }
-.work .viewall .btn i {
+.project .viewall .btn i {
   margin-left: 0.3rem;
   font-size: 1.5rem;
   transition: 0.3s;
 }
-.work .viewall .btn:hover {
+.project .viewall .btn:hover {
   background: #fff;
   color: #000;
 }
-.work .viewall .btn:hover i {
+.project .viewall .btn:hover i {
   transform: translateX(5px);
 }

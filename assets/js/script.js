@@ -5,9 +5,30 @@ $(document).ready(function () {
         $('.navbar').toggleClass('nav-toggle');
     });
 
+    // Close mobile menu when clicking on a link
+    $('.navbar ul li a').click(function() {
+        if ($(window).width() <= 768) {
+            $('#menu').removeClass('fa-times');
+            $('.navbar').removeClass('nav-toggle');
+        }
+    });
+
+    // Close mobile menu when clicking outside
+    $(document).click(function(event) {
+        if ($(window).width() <= 768) {
+            if (!$(event.target).closest('.navbar, #menu').length) {
+                $('#menu').removeClass('fa-times');
+                $('.navbar').removeClass('nav-toggle');
+            }
+        }
+    });
+
     $(window).on('scroll load', function () {
-        $('#menu').removeClass('fa-times');
-        $('.navbar').removeClass('nav-toggle');
+        // Close mobile menu on scroll (only on mobile)
+        if ($(window).width() <= 768) {
+            $('#menu').removeClass('fa-times');
+            $('.navbar').removeClass('nav-toggle');
+        }
 
         if (window.scrollY > 60) {
             document.querySelector('#scroll-top').classList.add('active');
@@ -15,10 +36,10 @@ $(document).ready(function () {
             document.querySelector('#scroll-top').classList.remove('active');
         }
 
-        // scroll spy
+        // scroll spy with adjusted offset
         $('section').each(function () {
             let height = $(this).height();
-            let offset = $(this).offset().top - 200;
+            let offset = $(this).offset().top - 100; // Adjusted to match scroll offset
             let top = $(window).scrollTop();
             let id = $(this).attr('id');
 
@@ -29,12 +50,15 @@ $(document).ready(function () {
         });
     });
 
-    // smooth scrolling
+    // smooth scrolling with 100px offset
     $('a[href*="#"]').on('click', function (e) {
         e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top,
-        }, 500, 'linear')
+        const target = $($(this).attr('href'));
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - 100,
+            }, 500, 'linear')
+        }
     });
 
     // <!-- emailjs to mail contact form data -->
@@ -131,6 +155,180 @@ $(document).ready(function () {
         }
     });
 
+    // Single Image Gallery with Scroll Navigation
+    const galleryImage = document.getElementById('gallery-image');
+    const progressBar = document.querySelector('.gallery-progress-bar');
+    const galleryContainer = document.querySelector('.gallery-container');
+    
+    // Image sources array - Add your actual image paths here
+    const imageSources = [
+        './assets/images/profile/profile1.jpeg',
+        './assets/images/profile/profile2.JPG',
+    ];
+    
+    let currentImageIndex = 0;
+    let isScrolling = false;
+    
+    if (galleryImage && galleryContainer) {
+        // Update image function with GSAP animation
+        function updateImage(index) {
+            if (index === currentImageIndex || isScrolling) return;
+            
+            isScrolling = true;
+            galleryContainer.classList.add('changing');
+            
+            // Animate image change
+            gsap.to(galleryImage, {
+                opacity: 0,
+                scale: 0.95,
+                duration: 0.3,
+                ease: "power2.out",
+                onComplete: () => {
+                    // Change image source
+                    galleryImage.src = imageSources[index];
+                    galleryImage.alt = `Sam Nguyen - Profile ${index + 1}`;
+                    
+                    // Animate back in
+                    gsap.to(galleryImage, {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.4,
+                        ease: "back.out(1.2)",
+                        onComplete: () => {
+                            galleryContainer.classList.remove('changing');
+                            isScrolling = false;
+                        }
+                    });
+                }
+            });
+            
+            currentImageIndex = index;
+            updateProgressBar(index);
+        }
+        
+        function nextImage() {
+            const nextIndex = (currentImageIndex + 1) % imageSources.length;
+            updateImage(nextIndex);
+        }
+        
+        function prevImage() {
+            const prevIndex = (currentImageIndex - 1 + imageSources.length) % imageSources.length;
+            updateImage(prevIndex);
+        }
+        
+        function updateProgressBar(index) {
+            const progress = ((index + 1) / imageSources.length) * 100;
+            gsap.to(progressBar, {
+                width: `${progress}%`,
+                duration: 0.5,
+                ease: "power2.out"
+            });
+        }
+        
+        // Initialize
+        updateProgressBar(0);
+        
+        // Mouse wheel scroll over image
+        galleryContainer.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            
+            if (isScrolling) return;
+            
+            // Throttle scroll events
+            if (galleryContainer.dataset.scrollThrottle) return;
+            galleryContainer.dataset.scrollThrottle = 'true';
+            
+            setTimeout(() => {
+                delete galleryContainer.dataset.scrollThrottle;
+            }, 300);
+            
+            if (e.deltaY > 0) {
+                nextImage(); // Scroll down - next image
+            } else {
+                prevImage(); // Scroll up - previous image
+            }
+        }, { passive: false });
+        
+        // Touch/swipe support
+        let startY = 0;
+        let startX = 0;
+        let currentY = 0;
+        let currentX = 0;
+        let isDragging = false;
+        let startTime = 0;
+        
+        galleryContainer.addEventListener('touchstart', (e) => {
+            startY = e.touches[0].clientY;
+            startX = e.touches[0].clientX;
+            currentY = startY;
+            currentX = startX;
+            startTime = Date.now();
+            isDragging = true;
+        });
+        
+        galleryContainer.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            
+            currentY = e.touches[0].clientY;
+            currentX = e.touches[0].clientX;
+            
+            e.preventDefault();
+        }, { passive: false });
+        
+        galleryContainer.addEventListener('touchend', (e) => {
+            if (!isDragging || isScrolling) return;
+            
+            const diffY = startY - currentY;
+            const diffX = startX - currentX;
+            const diffTime = Date.now() - startTime;
+            
+            // Determine if it's a vertical or horizontal swipe
+            const isVerticalSwipe = Math.abs(diffY) > Math.abs(diffX);
+            const velocity = Math.abs(isVerticalSwipe ? diffY : diffX) / diffTime;
+            
+            // Minimum threshold for swipe
+            const threshold = velocity > 0.3 ? 30 : 60;
+            
+            if (isVerticalSwipe && Math.abs(diffY) > threshold) {
+                if (diffY > 0) {
+                    nextImage(); // Swipe up - next image
+                } else {
+                    prevImage(); // Swipe down - previous image
+                }
+            } else if (!isVerticalSwipe && Math.abs(diffX) > threshold) {
+                if (diffX > 0) {
+                    nextImage(); // Swipe left - next image
+                } else {
+                    prevImage(); // Swipe right - previous image
+                }
+            }
+            
+            isDragging = false;
+        });
+        
+        // Auto-play functionality (optional)
+        let autoPlayInterval;
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                if (!isScrolling) {
+                    nextImage();
+                }
+            }, 4000);
+        }
+        
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+        
+        // Auto-play controls
+        galleryContainer.addEventListener('mouseenter', stopAutoPlay);
+        galleryContainer.addEventListener('mouseleave', startAutoPlay);
+        galleryContainer.addEventListener('touchstart', stopAutoPlay);
+        
+        // Start auto-play
+        startAutoPlay();
+    }
+
 });
 
 
@@ -164,7 +362,7 @@ async function fetchData(name = "skills") {
 
 
 function showProjects(projects) {
-    let projectsContainer = document.querySelector("#work .box-container");
+    let projectsContainer = document.querySelector("#project .box-container");
     let projectHTML = "";
     projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
         projectHTML += `
@@ -200,7 +398,7 @@ function showProjects(projects) {
     });
 
     /* SCROLL PROJECTS */
-    srtop.reveal('.work .box', { interval: 200 });
+    srtop.reveal('.project .box', { interval: 200 });
 
 }
 
@@ -290,7 +488,7 @@ srtop.reveal('.skills .container .bar', { delay: 400 });
 
 
 /* SCROLL PROJECTS */
-srtop.reveal('.work .box', { interval: 200 });
+srtop.reveal('.project .box', { interval: 200 });
 
 /* SCROLL EXPERIENCE */
 srtop.reveal('.experience .timeline', { delay: 400 });
