@@ -53,8 +53,86 @@ $(document).ready(function () {
         event.preventDefault();
     });
     // <!-- emailjs to mail contact form data -->
+    // Experience modal functionality
+    let experienceData = null
+    fetchData("experience").then(data => {
+    experienceData = data;});
+    // Modal functionality
+    const modal = document.getElementById('experienceModal');
+    const modalCompanyName = document.getElementById('modalCompanyName');
+    const modalPosition = document.getElementById('modalPosition');
+    const modalBody = document.getElementById('modalBody');
+    const closeBtn = document.querySelector('.close');
+
+    // Add click event listeners to experience containers
+    document.querySelectorAll('.experience .container').forEach(container => {
+        container.addEventListener('click', function() {
+            const company = this.getAttribute('data-company');
+            const data = experienceData[company];
+            
+            if (data) {
+                modalCompanyName.textContent = data.company;
+                modalPosition.textContent = `${data.position} | ${data.period}`;
+                
+                let modalContent = '';
+                
+                if (data.achievements.length > 0) {
+                    modalContent += '<div class="achievement-section">';
+                    modalContent += '<h3>Achievements</h3>';
+                    data.achievements.forEach(achievement => {
+                        modalContent += `
+                            <div class="achievement-item">
+                                <h4>${achievement.title}</h4>
+                                <p>${achievement.description}</p>
+                                <div class="date">${achievement.date}</div>
+                            </div>
+                        `;
+                    });
+                    modalContent += '</div>';
+                }
+                
+                if (data.reports.length > 0) {
+                    modalContent += '<div class="achievement-section">';
+                    modalContent += '<h3>Reports & Documentation</h3>';
+                    data.reports.forEach(report => {
+                        modalContent += `
+                            <div class="achievement-item">
+                                <h4>${report.title}</h4>
+                                <p>${report.description}</p>
+                                <div class="date">${report.date}</div>
+                            </div>
+                        `;
+                    });
+                    modalContent += '</div>';
+                }
+                
+                modalBody.innerHTML = modalContent;
+                modal.style.display = 'block';
+            }
+        });
+    });
+
+    // Close modal when clicking the X button
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+        }
+    });
 
 });
+
 
 document.addEventListener('visibilitychange',
     function () {
@@ -79,15 +157,20 @@ var typed = new Typed(".typing-text", {
 });
 // <!-- typed js effect ends -->
 
-async function fetchData(type = "skills") {
-    let response
-    type === "skills" ?
-        response = await fetch("skills.json")
-        :
-        response = await fetch("./projects/projects.json")
+async function fetchData(name = "skills") {
+  try {
+    const response = await fetch(`${name}.json`);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch ${name}.json`);
+    }
     const data = await response.json();
     return data;
+  } catch (error) {
+    console.error("Error fetching JSON:", error);
+    return null;
+  }
 }
+
 
 function showSkills(skills) {
     let skillsContainer = document.getElementById("skillsContainer");
@@ -149,7 +232,7 @@ fetchData().then(data => {
     showSkills(data);
 });
 
-fetchData("projects").then(data => {
+fetchData("projects/projects").then(data => {
     showProjects(data);
 });
 
@@ -221,12 +304,14 @@ srtop.reveal('.about .content .box-container', { delay: 200 });
 srtop.reveal('.about .content .resumebtn', { delay: 200 });
 
 
+/* SCROLL EDUCATION */
+srtop.reveal('.education .box', { interval: 200 });
+
 /* SCROLL SKILLS */
 srtop.reveal('.skills .container', { interval: 200 });
 srtop.reveal('.skills .container .bar', { delay: 400 });
 
-/* SCROLL EDUCATION */
-srtop.reveal('.education .box', { interval: 200 });
+
 
 /* SCROLL PROJECTS */
 srtop.reveal('.work .box', { interval: 200 });

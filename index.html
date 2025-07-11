@@ -46,8 +46,8 @@
         <ul>
           <li><a class="active" href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#skills">Education</a></li>
-          <li><a href="#education">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#work">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -174,7 +174,7 @@
       </div>
     </section>
     <!-- about section ends -->
-
+    
     <!-- education section starts -->
     <section class="education" id="education">
       <h1 class="heading">
@@ -200,7 +200,7 @@
     </section>
     <!-- education section ends -->
 
-    <!-- skills section starts -->
+<!-- skills section starts -->
     <section class="skills" id="skills">
       <div class="container">
         <h2 class="heading">
@@ -246,7 +246,7 @@
       <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
 
       <div class="timeline">
-        <div class="container right">
+        <div class="container right" data-company="cso">
           <div class="content">
             <img
               src="./assets/images/logo/CSO.png"
@@ -263,11 +263,13 @@
             </div>
           </div>
         </div>
-        <div class="container left">
+        <div class="container left" data-company="hitachi">
           <div class="content">
             <img
               src="./assets/images/logo/Hitachi.png"
               alt="Hitachi Digital Service Vietnam"
+              style="filter: invert(1);"
+              
             />
             <div>
               <div class="tag">
@@ -281,7 +283,7 @@
           </div>
         </div>
 
-        <div class="container right">
+        <div class="container right" data-company="wpi">
           <div class="content">
             <img
               src="./assets/images/logo/WPI.png"
@@ -355,7 +357,6 @@
     </section>
     <!-- contact section ends -->
 
-
     <!-- scroll top btn -->
     <a
       href="#home"
@@ -403,6 +404,22 @@
     ></script>
 
     <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+    <!-- Experience Modal -->
+    <div id="experienceModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h2 id="modalCompanyName"></h2>
+            <div class="position" id="modalPosition"></div>
+          </div>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Content will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
 
     <script src="./assets/js/script.js"></script>
   </body>
