@@ -134,17 +134,6 @@ $(document).ready(function () {
 });
 
 
-document.addEventListener('visibilitychange',
-    function () {
-        if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Sam Nguyen";
-            $("#favicon").attr("href", "assets/images/favicon.png");
-        }
-        else {
-            document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "assets/images/favhand.png");
-        }
-    });
 
 
 // <!-- typed js effect starts -->
@@ -172,20 +161,7 @@ async function fetchData(name = "skills") {
 }
 
 
-function showSkills(skills) {
-    let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`
-    });
-    skillsContainer.innerHTML = skillHTML;
-}
+
 
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
@@ -201,7 +177,7 @@ function showProjects(projects) {
         <div class="desc">
           <p>${project.desc}</p>
           <div class="btns">
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+            <a href="${project.links.code}" class="btn" target="_blank">Learn More  <i class="fas fa-code"></i></a>
           </div>
         </div>
       </div>

@@ -1,0 +1,126 @@
+.about {
+  background: transparent;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  font-family: 'Abel', sans-serif;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-height: none;
+  min-height: 50vh;
+  margin-bottom: 50px;
+}
+.about .row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.about .row .image {
+  text-align: center;
+  flex: 1 1 35rem;
+}
+.about .row .image img {
+  margin: 4rem;
+  width: 30rem;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  mix-blend-mode: normal;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.about .row .image img:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.about .row .content {
+  flex: 1 1 45rem;
+  padding: 3rem;
+}
+.about .row .content h3 {
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 300;
+}
+.about .row .content .tag {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.about .row .content p {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  font-family: 'Abel', sans-serif;
+  text-transform: none;
+}
+.about .row .content .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-family: 'Abel', sans-serif;
+}
+.about .row .content .box-container .box p {
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+.about .row .content .box-container .box p span {
+  color: #ffffff;
+}
+.resumebtn {
+  margin-top: 6rem;
+}
+.resumebtn .btn {
+  padding: 1.7rem 3rem;
+  border-radius: 0;
+  transition: 0.3s;
+  color: #000000;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: none;
+  font-family: 'Abel', sans-serif;
+}
+.resumebtn .btn span {
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+.resumebtn .btn i {
+  margin-left: 0.3rem;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+.resumebtn .btn:hover {
+  background: transparent;
+  color: #ffffff;
+}
+.resumebtn .btn:hover i {
+  transform: translateX(5px);
+}
+/* about media queries starts*/
+@media screen and (max-width: 600px) {
+  .about .row .image {
+    margin-top: 2rem;
+  }
+  .about .row .image img {
+    margin: 0 auto;
+    width: 80%;
+    mix-blend-mode: normal;
+  }
+  .about .row {
+    padding: 0.5rem;
+    margin-bottom: 7rem;
+  }
+  .about .row .content {
+    padding: 1rem;
+  }
+  .about .row .content .box-container {
+    gap: 0;
+  }
+}
+/* about media queries ends*/

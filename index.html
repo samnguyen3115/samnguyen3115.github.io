@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="jigar sable, portfolio, jigar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio"
-    />
-    <meta
-      name="description"
-      content="Welcome to Jigar's Portfolio. Full-Stack Web Developer and Android App Developer"
-    />
+    <meta name="keywords" />
+    <meta name="description" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/about.css" />
+    <link rel="stylesheet" href="./assets/css/education.css" />
+    <link rel="stylesheet" href="./assets/css/experience.css" />
+    <link rel="stylesheet" href="./assets/css/project.css" />
+    <link rel="stylesheet" href="./assets/css/skill.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -26,9 +26,14 @@
     <link
       id="favicon"
       rel="shortcut icon"
-      href="./assets/images/favicon.png"
+      href="./assets/images/hero.png"
       type="image/x-png"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Portfolio | Sam Nguyen</title>
   </head>
   <body oncontextmenu="return false">
@@ -39,7 +44,7 @@
 
     <!-- navbar starts -->
     <header>
-      <a href="/" class="logo"><i class="fab fa-python"></i> Sam</a>
+      <a href="/" class="logo"><i class="fab fa-python"></i> sam</a>
 
       <div id="menu" class="fas fa-bars"></div>
       <nav class="navbar">
@@ -65,7 +70,7 @@
       <div class="content">
         <h2>
           Hi There,<br />
-          I'm  <span>Sam Nguyen</span>
+          I'm <span>Sam Nguyen</span>
         </h2>
         <p>I am <span class="typing-text"></span></p>
 
@@ -134,7 +139,12 @@
           <h3>I'm Sam</h3>
           <span class="tag">Backend Developer</span>
 
-          <p></p>
+          <p>
+            I'm a full-stack developer and student passionate about building
+            clean, efficient software. From user-friendly interfaces to scalable
+            back-end systems, I love turning real-world problems into working
+            solutions.
+          </p>
 
           <div class="box-container">
             <!-- <div class="box">
@@ -174,7 +184,7 @@
       </div>
     </section>
     <!-- about section ends -->
-    
+
     <!-- education section starts -->
     <section class="education" id="education">
       <h1 class="heading">
@@ -186,8 +196,9 @@
           <div class="image">
             <img
               draggable="false"
-              src="./assets/images/educat/wpi.jpg"
+              src="./assets/images/logo/WPI_logo.png"
               alt=""
+              style="filter: grayscale(100%); width: 250px; padding: 20px"
             />
           </div>
           <div class="content">
@@ -200,19 +211,135 @@
     </section>
     <!-- education section ends -->
 
-<!-- skills section starts -->
+    <!-- skills section starts -->
     <section class="skills" id="skills">
       <div class="container">
         <h2 class="heading">
           <i class="fas fa-laptop-code"></i> Skills & Tech Stacks
         </h2>
-        <div class="row" id="skillsContainer">
-          <!-- <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
-                <span>AdobeXD</span>
+        <div class="skills-table">
+          <div class="skills-row">
+            <div class="skills-category">Programming Languages</div>
+            <div class="skills-items">
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                  alt="Python"
+                />
+                <span>Python</span>
               </div>
-            </div> -->
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg"
+                />
+                <span>C++</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"
+                />
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-plain.svg"
+                />
+                <span>SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-row">
+            <div class="skills-category">Frameworks</div>
+            <div class="skills-items">
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+                />
+                <span>FastAPI</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
+                />
+                <span>Flask</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-row">
+            <div class="skills-category">Web Development</div>
+            <div class="skills-items">
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg"
+                />
+                <span>HTML</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg"
+                />
+                <span>CSS</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React"
+                />
+                <span>React</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg"
+                />
+                <span>PostgreSQL</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg"
+                />
+                <span>RabbitMQ</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-plain.svg"
+                />
+                <span>SQLAlchemy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-row">
+            <div class="skills-category">Cloud & DevOps</div>
+            <div class="skills-items">
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+                  alt="Azure"
+                />
+                <span>Azure</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+                />
+                <span>AWS</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg"
+                />
+                <span>Docker</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-plain.svg"
+                />
+                <span>Linux</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -221,23 +348,7 @@
     <section class="work" id="work">
       <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects</h2>
 
-      <div class="box-container">
-        <!-- <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/portfolio1.PNG" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Portfolio Website</h3>
-        </div>
-        <div class="desc">
-          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="https://github.com/jigar-sable/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-      </div>
+      <div class="box-container"></div>
     </section>
     <!-- work project section ends -->
 
@@ -268,8 +379,7 @@
             <img
               src="./assets/images/logo/Hitachi.png"
               alt="Hitachi Digital Service Vietnam"
-              style="filter: invert(1);"
-              
+              style="filter: invert(1)"
             />
             <div>
               <div class="tag">
@@ -286,7 +396,7 @@
         <div class="container right" data-company="wpi">
           <div class="content">
             <img
-              src="./assets/images/logo/WPI.png"
+              src="./assets/images/logo/WPI_logo.png"
               alt="Worcester Polytechnic Institute"
             />
             <div>

@@ -1,4 +1,14 @@
 [
+    {
+    "name": "Lost and Found",
+    "desc": "A blog like lost and found web application that allows students to report lost items and found them.",
+    "image": "lostandfound",
+    "category": "basicweb",
+    "links": {
+      "view": "https://github.com/samnguyen3115/lostandfound-wpi",
+      "code": "https://github.com/samnguyen3115/lostandfound-wpi"
+    }
+  },
   {
     "name": "EventTask",
     "desc": "A to do app with AI integrated to generate tasks based on user input.",
@@ -9,16 +19,7 @@
       "code": "https://github.com/samnguyen3115/eventtask"
     }
   },
-  {
-    "name": "Lost and Found",
-    "desc": "A blog like lost and found web application that allows students to report lost items and found them.",
-    "image": "lostandfound",
-    "category": "basicweb",
-    "links": {
-      "view": "https://github.com/samnguyen3115/lostandfound-wpi",
-      "code": "https://github.com/samnguyen3115/lostandfound-wpi"
-    }
-  },
+
   {
     "name": "Yelp Dataset Challenge",
     "desc": "Generate and evaluate models that can be used to predict key attributes and the closure of a business.",

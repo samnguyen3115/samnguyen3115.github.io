@@ -1,0 +1,118 @@
+.education {
+  border-radius: 16px;
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+  font-family: 'Abel', sans-serif;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-height: none;
+  min-height: 30vh;
+}
+.education .qoute {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.education .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.education .box-container .box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-radius: 0;
+  text-align: center;
+  position: relative;
+  margin-top: 2rem;
+  overflow: hidden;
+  transition: 0.3s;
+  background: transparent;
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  font-family: 'Abel', sans-serif;
+  margin-bottom: 20px;
+}
+.education .box-container .box:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.education .box-container .box .image {
+  flex: 1 1 20rem;
+  width: 100%;
+}
+.education .box-container .box img {
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.education .box-container .box .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex-wrap: wrap;
+  flex: 1 1 70rem;
+}
+.education .box-container .box .content h3 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  padding: 0.5rem 0;
+  font-weight: 300;
+  text-align: left;
+  margin-left: 1rem;
+}
+.education .box-container .box .content p {
+  font-size: 2rem;
+  margin-left: 1rem;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.8);
+}
+.education h4 {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  margin: 1rem;
+  font-family: 'Abel', sans-serif;
+  font-weight: 400;
+}
+
+/* education media queries starts*/
+@media screen and (max-width: 600px) {
+  .education .box-container .box {
+    flex-direction: column;
+    width: 100%;
+  }
+  .education .box-container .box .image {
+    width: 100%;
+    height: 25rem;
+  }
+  .education .box-container .box img {
+    width: 200px !important;
+  }
+  .education .box-container .box .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex-wrap: wrap;
+    flex: 0;
+  }
+  .education .btns {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex-wrap: wrap;
+  }
+}
+/* education media queries ends*/
