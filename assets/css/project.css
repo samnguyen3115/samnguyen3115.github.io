@@ -1,10 +1,10 @@
 .project {
-  background: transparent;
+  background: #feedc7 ;
   border-radius: 0;
-  box-shadow: none;
+  box-shadow: 9px 9px 0px #000000;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  font-family: 'Abel', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -12,27 +12,38 @@
   max-height: none;
   min-height: 50vh;
   margin-bottom: 50px;
-  border: 3px solid rgb(255, 255, 255);
+  border: 2px solid black;
+  padding: 3rem;
 }
+
 .project h2 {
-  color: #fff;
+  color: black;
   padding: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
 .project .box-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   margin: 2rem;
 }
+
 .project .box-container .box {
   flex: 1 1 30rem;
   border-radius: 0;
-  box-shadow: none;
   position: relative;
   overflow: hidden;
   height: 30rem;
-  width:30rem;
-  border: 3px solid rgb(255, 255, 255);
+  width: 30rem;
+  border: 4px solid black;
+  transition: all 0.3s ease;
+}
+
+.project .box-container .box:hover {
+  transform: translate(-2px, -2px);
 }
 .project .box-container .box img {
   height: 100%;
@@ -75,13 +86,13 @@
   top: 25%;
 }
 .project .desc {
-  margin: 2rem;
+  margin: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .project .desc p {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .project .desc .btns {
   display: flex;
@@ -95,13 +106,13 @@
   padding: 1.5rem 2.5rem;
   border-radius: 0.5rem;
   font-size: 2rem;
-  color: #fff;
-  background: rgb(12, 12, 12);
+  color: #000000;
+  background: rgb(253, 253, 253);
   margin-right: 2rem;
 }
 .project .desc .btns .btn:hover {
-  background: #ffffff;
-  color: black;
+  background: #000000;
+  color: rgb(255, 255, 255);
 }
 .project .viewall {
   display: flex;

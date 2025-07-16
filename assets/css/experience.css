@@ -3,14 +3,14 @@
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.42);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.2px);
-  -webkit-backdrop-filter: blur(6.2px);
+  background: #85ca9c;
+  border-radius: 0;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   position: relative;
   transition: all 0.3s ease;
-  border: 3px solid rgb(255, 255, 255);
+  border: 2px solid #000000;
 }
 
 .experience img {
@@ -19,6 +19,7 @@
   object-fit: contain;
   flex-shrink: 0;
   transition: all 0.3s ease;
+  padding: 1rem;
 }
 
 .experience .tag {
@@ -27,43 +28,62 @@
 }
 
 .experience .tag h2 {
-  font-size: 2.7rem;
-  font-weight: 600;
+  font-size: 2.4rem;
+  font-weight: 700;
   margin-bottom: 8px;
-  color: #fff;
+  color: #000000;
   line-height: 1.2;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .experience .desc h3 {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 5px;
-  color: #fff;
+  color: #1f2937;
   opacity: 0.9;
 }
 
 .experience .desc p {
   font-size: 1.8rem;
-  color: #fff;
+  color: #29313c;
   opacity: 0.8;
   margin: 0;
 }
 .experience {
-  color: white !important;
+  background: #a9d7b8;
+  border: 2px solid #000000;
+  border-radius: 0;
+  box-shadow: 9px 9px 0px #000000;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  font-family: 'Space Grotesk', sans-serif;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-height: none;
   min-height: 50vh;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
 }
 
 .experience .timeline {
   position: relative;
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   margin-top: 20px;
+  padding: 3rem 2rem;
 }
 .experience .timeline::after {
   content: "";
   position: absolute;
   width: 6px;
-  background: rgba(255, 255, 255, 0.663);
+  background: #000000;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.2px);
@@ -73,7 +93,6 @@
   left: 50%;
   margin-left: -3px;
   z-index: -2;
-  
 }
 .experience .container {
   padding: 10px 40px;
@@ -99,17 +118,18 @@
 .experience .container::after {
   content: "\f0b1";
   position: absolute;
+  align-content: center;
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   border: 4px solid #000000;
   top: 15px;
   border-radius: 50%;
   z-index: 100;
-  font-size: 1.89rem;
+  font-size: 1.50rem;
   text-align: center;
-  font-weight: 600;
+  font-weight: 800;
   color: #000000;
   font-family: "Font Awesome\ 5 Free";
   transition: all 0.3s ease;
@@ -118,7 +138,7 @@
 .experience .container:hover::after {
   background-color: #000000;
   border-color: #ffffff;
-  color: #fff;
+  color: #ffffff;
   transform: scale(1.1);
 }
 
@@ -142,7 +162,7 @@
   top: 22px;
   width: 0;
   z-index: 1;
-  right: 30px;
+  right: 31px;
   border: medium solid #000000;
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #000000;
@@ -215,9 +235,9 @@
   
   .experience .left::before, .experience .right::before {
     left: 60px;
-    border: medium solid #000000;
+    border: medium solid #3b82f6;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #000000 transparent transparent;
+    border-color: transparent #3b82f6 transparent transparent;
   }
   
   .experience .container:hover.left::before, 
