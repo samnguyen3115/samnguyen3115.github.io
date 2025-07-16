@@ -1,8 +1,8 @@
 .contact {
   background: #f8fafc;
-  border: 2px solid #d1d5db;
+  border: 2px solid #000000;
   border-radius: 0;
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 9px 9px 0px #000000;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   font-family: 'Space Grotesk', sans-serif;
@@ -15,9 +15,11 @@
   margin-bottom: 50px;
   position: relative;
   overflow: hidden;
-  padding: 4rem 2rem;
+  padding: 0 0 !important;
 }
-
+.contact .heading{
+  padding-top: 50px;
+}
 /* Contact section map styling to match image-box design */
 .contact .container .content {
   display: flex;
@@ -34,13 +36,14 @@
   justify-content: center;
   max-width: 450px;
   min-width: 220px;
+  border: 2px solid #000000;
 }
 
 .contact .container .content .image-box iframe {
   width: 100%;
   height: 400px;
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
-  border: 2px solid #d1d5db;
+  border: 2px solid #000000;
   background: #f8fafc;
 }
 
@@ -73,7 +76,6 @@
   margin-bottom: 50px;
   max-width: 1050px;
   margin: 2rem auto;
-  padding: 3rem;
 }
 .contact .container .content {
   display: flex;
@@ -123,16 +125,15 @@ form .message textarea {
   font-size: 16px;
   font-family: "Space Grotesk", sans-serif;
   border-radius: 0;
-  border: 2px solid #d1d5db;
-  background: #f8fafc;
+  border: 2px solid #000000;
+  background: #ffffff;
   color: #1f2937;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 form .field input:focus,
 form .message textarea:focus {
-  border-color: #3b82f6;
+  border-color: #000000;
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
 }
 .field input::placeholder,
@@ -163,7 +164,6 @@ form .message textarea {
   max-height: 230px;
   max-width: 100%;
   min-width: 100%;
-  padding: 12px 20px 0 48px;
 }
 form .message textarea::-webkit-scrollbar {
   width: 0px;
@@ -182,22 +182,17 @@ form .button-area {
   cursor: pointer;
   border-radius: 0;
   padding: 13px 25px;
-  background: #3b82f6;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  background: #000000;
   transition: 0.3s ease;
   font-family: "JetBrains Mono", monospace;
-  border: 2px solid #3b82f6;
+  border: 2px solid #000000;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
 .button-area button:hover {
-  background: #6366f1;
-  border-color: #6366f1;
-  color: #ffffff;
-  transform: translate(-2px, -2px);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+  transform: scale(1.05)
 }
 .button-area span {
   font-size: 17px;
@@ -213,16 +208,11 @@ form .button-area {
   color: #ffffff;
 }
 
-.button-area button:hover i {
-  color: #ffffff;
-  transform: translateX(5px);
-}
 
 /* contact section media queries starts */
 @media (max-width: 900px) {
   .contact {
     min-height: 70vh;
-    padding: 2rem 1rem;
   }
   .contact .container {
     margin: 1rem auto;
@@ -272,5 +262,9 @@ form .button-area {
   section {
     padding: 2rem;
   }
+  .contact .container .content .image-box iframe {
+  width: 100%;
+  height: 100%;
+}
 }
 /* common media queries ends*/

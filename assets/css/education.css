@@ -151,8 +151,8 @@
     height: 25rem;
   }
   .education .box-container .box img {
-    width: 150px !important;
-    height: 150px !important;
+    width: 300px !important;
+    height: 300px !important;
   }
   .education .box-container .box .content {
     position: relative;

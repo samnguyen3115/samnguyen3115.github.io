@@ -343,6 +343,9 @@
     height: 4px;
     margin: 0.8rem auto 0 auto;
   }
+  .about .row .content{
+    padding: 3rem;
+  }
 }
 
 @media (max-width: 360px) {

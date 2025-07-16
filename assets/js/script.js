@@ -42,8 +42,16 @@ $(document).ready(function () {
             let offset = $(this).offset().top - 100; // Adjusted to match scroll offset
             let top = $(window).scrollTop();
             let id = $(this).attr('id');
+            let windowHeight = $(window).height();
+            let documentHeight = $(document).height();
 
-            if (top > offset && top < offset + height) {
+            // Special handling for the last section (contact)
+            if (id === 'contact' && top + windowHeight >= documentHeight - 50) {
+                $('.navbar ul li a').removeClass('active');
+                $('.navbar').find(`[href="#${id}"]`).addClass('active');
+            }
+            // Normal scroll spy logic for other sections
+            else if (top > offset && top < offset + height) {
                 $('.navbar ul li a').removeClass('active');
                 $('.navbar').find(`[href="#${id}"]`).addClass('active');
             }
