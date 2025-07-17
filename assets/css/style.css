@@ -26,6 +26,7 @@
   --project-background: #feedc7;
   --experience-background: #a9d7b8;
   --experience-box-background: #ffffff;
+  --experience-special:#feedc7
 }
 
 /* Dark mode colors */
@@ -45,6 +46,7 @@
   --project-background: #000000;
   --experience-background: #000000;
   --experience-box-background: #000000;
+  --experience-special:black;
 }
 
 
