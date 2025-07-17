@@ -3,14 +3,16 @@
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background: #85ca9c;
+  background: var(--experience-box-background) ;
   border-radius: 0;
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   position: relative;
-  transition: all 0.3s ease;
-  border: 2px solid #000000;
+  border: 2px solid var(--border-primary);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.2s ease;
+  will-change: transform;
 }
 
 .experience img {
@@ -18,8 +20,14 @@
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
-  transition: all 0.3s ease;
   padding: 1rem;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+
+/* Invert Hitachi logo in dark mode */
+[data-theme="dark"] .experience .container[data-company="hitachi"] img {
+  filter: invert(1);
 }
 
 .experience .tag {
@@ -31,7 +39,7 @@
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #000000;
+  color: var(--text-primary);
   line-height: 1.2;
   font-family: 'JetBrains Mono', monospace;
   text-transform: uppercase;
@@ -42,21 +50,21 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #1f2937;
+  color: var(--text-primary);
   opacity: 0.9;
 }
 
 .experience .desc p {
   font-size: 1.8rem;
-  color: #29313c;
+  color: var(--text-primary);
   opacity: 0.8;
   margin: 0;
 }
 .experience {
-  background: #a9d7b8;
-  border: 2px solid #000000;
+  background:  var(--experience-background);
+  border: 2px solid var(--border-primary);
   border-radius: 0;
-  box-shadow: 9px 9px 0px #000000;
+  box-shadow: 9px 9px 0px var(--border-primary);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   font-family: 'Space Grotesk', sans-serif;
@@ -84,7 +92,7 @@
   content: "";
   position: absolute;
   width: 6px;
-  background: #000000;
+  background: var(--border-primary);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.2px);
@@ -101,7 +109,9 @@
   background-color: inherit;
   width: 50%;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              filter 0.2s ease;
+  will-change: transform;
 }
 
 /* Hover effects for containers */
@@ -123,23 +133,23 @@
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: #ffffff;
-  border: 4px solid #000000;
+  background-color: white;
+  border: 4px solid black;
   top: 15px;
   border-radius: 50%;
   z-index: 100;
   font-size: 1.50rem;
   text-align: center;
   font-weight: 800;
-  color: #000000;
+  color: black;
   font-family: "Font Awesome\ 5 Free";
   transition: all 0.3s ease;
 }
 
 .experience .container:hover::after {
   background-color: #000000;
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: var(--border-primary);
+  color: white;
   transform: scale(1.1);
 }
 
@@ -164,15 +174,13 @@
   width: 0;
   z-index: 1;
   right: 31px;
-  border: medium solid #000000;
+  border: medium solid var(--border-primary);
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #000000;
+  border-color: transparent transparent transparent var(--border-primary);
   transition: all 0.3s ease;
 }
 
-.experience .container:hover.left::before {
-  border-color: transparent transparent transparent #ffffff;
-}
+
 
 /* arrows pointing left  */
 .experience .right::before {
@@ -183,15 +191,12 @@
   position: absolute;
   z-index: 1;
   left: 30px;
-  border: medium solid #000000;
+  border: medium solid var(--border-primary);
   border-width: 10px 10px 10px 0;
-  border-color: transparent #000000 transparent transparent;
+  border-color: transparent var(--border-primary) transparent transparent;
   transition: all 0.3s ease;
 }
 
-.experience .container:hover.right::before {
-  border-color: transparent #ffffff transparent transparent;
-}
 
 /* Tablet and smaller desktop screens */
 @media (max-width: 1200px) {
@@ -304,14 +309,14 @@
   
   .experience .left::before, .experience .right::before {
     left: 60px;
-    border: medium solid #000000;
+    border: medium solid var(--border-primary);
     border-width: 10px 10px 10px 0;
-    border-color: transparent #000000 transparent transparent;
+    border-color: transparent var(--border-primary) transparent transparent;
   }
   
   .experience .container:hover.left::before, 
   .experience .container:hover.right::before {
-    border-color: transparent #ffffff transparent transparent;
+    border-color: transparent var(--border-primary) transparent transparent;
   }
   
   .experience .content {
@@ -403,116 +408,165 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   animation: fadeIn 0.3s ease;
 }
 
 .modal-content {
-  background: rgba(0, 0, 0, 0.719);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.6px);
-  -webkit-backdrop-filter: blur(7.6px);
-  border: 3px solid rgba(255, 255, 255, 0.767);
+  background: #ffffff;
+  border: 4px solid #000000;
+  border-radius: 0;
+  box-shadow: 12px 12px 0px #000000;
   margin: 5% auto;
   padding: 0;
-  border-radius: 15px;
   width: 90%;
   max-width: 80vw;
   max-height: 80vh;
   overflow-y: auto;
   position: relative;
   animation: slideIn 0.3s ease;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  font-family: 'Space Grotesk', sans-serif;
+  /* Custom scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #f0f0f0;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 0;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 0;
 }
 
 .modal-header {
-  padding: 20px 30px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 25px 30px;
+  border-bottom: 3px solid #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px 15px 0 0;
+  background: #a9d7b8;
+  position: relative;
 }
 
 .modal-header h2 {
-  color: #fff;
-  font-size: 2.2rem;
-  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 2.4rem;
+  font-weight: 700;
   margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .modal-header .position {
-  color: #fff;
-  font-size: 1.4rem;
-  opacity: 0.9;
-  font-weight: 300;
+  color: #1f2937;
+  font-size: 1.6rem;
+  opacity: 0.8;
+  font-weight: 500;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .close {
-  color: #fff;
+  color: #000000;
   font-size: 3rem;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
   line-height: 1;
+  padding: 0.5rem;
+  background: #ffffff;
+  border: 2px solid var(--border-primary);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 0.2s ease, 
+              color 0.2s ease;
+  will-change: transform;
 }
 
 .close:hover {
-  color: #ff6b6b;
-  transform: scale(1.1);
+  background: #ff6b6b;
+  color: #ffffff;
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px #000000;
 }
 
 .modal-body {
   padding: 30px;
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
 }
 
 .achievement-section {
   margin-bottom: 30px;
+  border: 2px solid var(--border-primary);
+  padding: 20px;
+  background: #f8fafc;
+  box-shadow: 6px 6px 0px #000000;
 }
 
 .achievement-section h3 {
-  color: #fff;
-  font-size: 30px;
+  color: #000000;
+  font-size: 2.4rem;
   margin-bottom: 15px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   padding-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border-bottom: 3px solid var(--border-primary);
 }
 
 .achievement-item {
-  background: rgba(255, 255, 255, 0.042);
-  padding: 15px;
+  background: #ffffff;
+  border: 2px solid var(--border-primary);
+  padding: 18px;
   margin-bottom: 15px;
-  border-radius: 10px;
-  border-left: 4px solid #fff;
-  transition: all 0.3s ease;
+  border-radius: 0;
+  box-shadow: 4px 4px 0px #000000;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.2s ease;
+  will-change: transform;
 }
 
 .achievement-item:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateX(5px);
+  background: #feedc7;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000000;
 }
 
 .achievement-item h4 {
-  color: #fff;
-  font-size: 20px;
+  color: #000000;
+  font-size: 1.8rem;
   margin-bottom: 8px;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .achievement-item p {
-  color: #fff;
-  font-size: 18px;
+  color: #1f2937;
+  font-size: 1.6rem;
   line-height: 1.6;
-  opacity: 0.9;
+  margin-bottom: 8px;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .achievement-item .date {
-  color: #fff;
-  font-size: 1rem;
-  opacity: 0.7;
-  font-style: italic;
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-style: normal;
+  background: #85ca9c;
+  padding: 4px 8px;
+  border: 1px solid var(--border-primary);
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 @keyframes fadeIn {
@@ -527,11 +581,11 @@
 @keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-30px) scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -540,13 +594,58 @@
   .modal-content {
     width: 95%;
     margin: 10% auto;
+    box-shadow: 8px 8px 0px #000000;
+  }
+
+  .modal-header {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   .modal-header h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+
+  .modal-header .position {
+    font-size: 1.4rem;
+  }
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2.5rem;
+    padding: 0.3rem;
   }
 
   .modal-body {
     padding: 20px;
+  }
+  
+  .achievement-section {
+    padding: 15px;
+    box-shadow: 4px 4px 0px #000000;
+  }
+  
+  .achievement-section h3 {
+    font-size: 2rem;
+  }
+  
+  .achievement-item {
+    padding: 15px;
+  }
+  
+  .achievement-item h4 {
+    font-size: 1.6rem;
+  }
+  
+  .achievement-item p {
+    font-size: 1.4rem;
+  }
+  
+  .achievement-item .date {
+    font-size: 1.2rem;
   }
 }

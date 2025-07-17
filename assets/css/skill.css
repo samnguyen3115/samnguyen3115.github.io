@@ -1,10 +1,10 @@
 .skills {
-  background: #ebf7f7;
+  background: var(--skill-background);
   border-radius: 0;
-  box-shadow: 9px 9px 0px #000000;
+  box-shadow: 9px 9px 0px var(--border-primary);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   width: 90%;
   margin: 0 auto;
   margin-top: 50px;
@@ -16,26 +16,26 @@
   position: relative;
   overflow: hidden;
   padding: 0 0;
-  border: black 2px solid;
+  border: var(--text-primary) 2px solid;
 }
 
 .skills h2 {
-  color: #000000;
+  color: var(--text-primary);
   margin-bottom: 30px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .skills .heading span {
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .skills .container {
   border-radius: 0;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  color: #1f2937;
+  color: var(--text-primary);
   width: 95%;
   margin: 0 auto;
   margin-top: 2rem;
@@ -48,7 +48,6 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-
 }
 
 .skills-row {
@@ -58,23 +57,20 @@
   align-items: center;
   min-height: 100px;
   margin-bottom: 2rem;
-  border: 2px solid #000000;
+  border: 2px solid var(--text-primary);
   transition: all 0.3s ease;
 }
-
-
-
 
 .skills-category {
   flex: 0 0 250px;
   font-size: 2.2rem;
   font-weight: 700;
-  color: #000000;
+  color: var(--text-primary);
   padding: 0 3rem;
   border-right: 2px solid #000000;
   margin-right: 3rem;
   text-align: left;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: flex;
@@ -96,13 +92,15 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem 2rem;
-  background: #ebf7f7;
-  border: 2px solid #080808;
+  background: var(--skill-background);
+  border: 2px solid var(--text-primary);
   border-radius: 0;
-  transition: all 0.3s ease;
   min-width: 140px;
   position: relative;
   overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
 }
 
 .skill-item::before {
@@ -112,8 +110,13 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
-  transition: all 0.5s ease;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
 }
 
 .skill-item:hover::before {
@@ -122,7 +125,7 @@
 
 .skill-item:hover {
   background: #ffffff;
-  border-color: #000000;
+  border-color: var(--text-primary);
   transform: translate(-2px, -2px);
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
 }
@@ -131,7 +134,8 @@
   width: 28px;
   height: 28px;
   object-fit: contain;
-  transition: all 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
 }
 
 .skill-item:hover img {
@@ -141,9 +145,9 @@
 .skill-item span {
   font-size: 1.6rem;
   font-weight: 600;
-  color: #000000;
+  color: var(--text-primary);
   white-space: nowrap;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -153,7 +157,6 @@
 }
 
 /* Responsive Design */
-
 
 @media screen and (max-width: 900px) {
   .skills-row {
@@ -200,7 +203,7 @@
     width: 24px;
     height: 24px;
   }
-  
+
   .skills-items {
     align-items: stretch;
   }

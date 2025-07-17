@@ -1,8 +1,8 @@
 .about {
-  background: #f5d479;
-  border: 2px solid #000000;
+  background: var(--accent-yellow);
+  border: 2px solid var(--border-primary);
   border-radius: 0;
-  box-shadow: 9px 9px 0px #000000;
+  box-shadow: 9px 9px 0px var(--shadow-primary);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   font-family: 'Space Grotesk', sans-serif;
@@ -40,13 +40,13 @@
   flex: 1 1 45rem;
   padding: 2rem;
   padding-bottom: 3rem;
-  border: 5px solid #000000;
+  border: 5px solid var(--border-primary);
   margin: 2rem;
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .about .row .content h3 {
-  color: #000000;
+  color: var(--text-primary);
   font-size: 4rem;
   font-weight: 700;
   font-family: 'JetBrains Mono', monospace;
@@ -56,7 +56,7 @@
 
 .about .row .content .tag {
   font-size: 2rem;
-  color: #636363;
+  color: var(--text-secondary);
   font-weight: 600;
   margin-top: 1rem;
   font-family: 'JetBrains Mono', monospace;
@@ -65,7 +65,7 @@
 
 .about .row .content .tag::before {
   content: "// ";
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 .about .row .content p {
@@ -73,7 +73,7 @@
   margin-top: 1.5rem;
   font-family: 'Space Grotesk', sans-serif;
   text-transform: none;
-  color: #1f2937;
+  color: var(--text-primary);
   line-height: 1.6;
 }
 
@@ -86,34 +86,37 @@
 }
 
 .about .row .content .box-container .box {
-  background: #f6f6f4;
-  border: 2px solid #000000;
-  color:black;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-primary);
+  color: var(--text-primary);
   padding: 1.5rem;
-  transition: all 0.3s ease;
-  box-shadow: 9px 9px 0px #000000;
+  box-shadow: 9px 9px 0px var(--shadow-primary);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.2s ease,
+              border-color 0.2s ease;
+  will-change: transform;
 }
 
 .about .row .content .box-container .box:hover {
   transform: translate(-2px, -2px);
   box-shadow: 0 0px 0 rgba(0, 0, 0, 0.1);
-  border-color: #000000;
+  border-color: var(--border-primary);
 }
 
 .about .row .content .box-container .box p {
   text-transform: none;
-  color: #000000;
+  color: var(--text-primary);
   margin: 0;
   font-weight: 400;
 }
 
 .about .row .content .box-container .box p span {
-  color: #000000;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
 .about .row .content .box-container .box a {
-  color: #000000 !important;
+  color: var(--text-primary) !important;
 }
 .resumebtn {
   margin-top: 6rem;
@@ -122,31 +125,26 @@
 .resumebtn .btn {
   padding: 1.8rem 5rem;
   border-radius: 0;
-  transition: all 0.3s ease;
-  color: #ffffff;
-  background: #131313;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  color: var(--bg-primary);
+  background: var(--text-primary);
+  border: 3px solid var(--border-primary);
   font-family: 'JetBrains Mono', monospace;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
   position: relative;
   overflow: hidden;
+  box-shadow: 4px 4px 0px var(--shadow-primary);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s ease,
+              background-color 0.2s ease,
+              color 0.2s ease;
+  will-change: transform;
+  cursor: pointer;
 }
 
-.resumebtn .btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s ease;
-}
 
-.resumebtn .btn:hover::before {
-  left: 100%;
-}
+
 
 .resumebtn .btn span {
   font-weight: 600;
@@ -157,19 +155,26 @@
 .resumebtn .btn i {
   margin-left: 1rem;
   font-size: 1.4rem;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease;
+  will-change: transform;
 }
 
 .resumebtn .btn:hover {
-  background: #f6f6f4;
-  color: black;
-  transform: translate(-2px, -2px);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transform: scale(1.05);
+  box-shadow: 6px 6px 0px var(--shadow-primary);
 }
 
 .resumebtn .btn:hover i {
-  transform: translateX(8px) rotate(360deg);
+  transform: translateX(4px);
 }
+
+.resumebtn .btn:active {
+  transform: scale(0.98);
+  box-shadow: 2px 2px 0px var(--shadow-primary);
+}
+
 /* about media queries starts*/
 @media screen and (max-width: 600px) {
   .about {
@@ -205,28 +210,31 @@
 /* Single Image Gallery Styles */
 .gallery-container {
   position: relative;
-  max-width: 30rem;
+  max-width: 35rem;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 0;
-  border: 5px solid #000000;
+  border: 6px solid var(--border-primary);
   cursor: grab;
   user-select: none;
-  background: #000000;
-  transition: all 0.3s ease;
-  aspect-ratio: 3/4;
+  background: var(--text-primary);
+  aspect-ratio: 4/5;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.2s ease;
+  will-change: transform;
+  box-shadow: 12px 12px 0px var(--shadow-primary);
 }
 
 .gallery-container:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+  transform: translate(-3px, -3px);
+  box-shadow: 15px 15px 0px var(--shadow-primary);
 }
 
 .gallery-container:active {
   cursor: grabbing;
-  transform: translate(1px, 1px);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+  transform: translate(2px, 2px);
+  box-shadow: 8px 8px 0px var(--shadow-primary);
 }
 
 #gallery-image {
@@ -234,8 +242,10 @@
   height: 100%;
   object-fit: cover;
   border: none;
-  transition: transform 0.6s ease, opacity 0.3s ease;
   display: block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.3s ease;
+  will-change: transform, opacity;
 }
 
 #gallery-image:hover {
@@ -246,40 +256,6 @@
 .gallery-container.changing #gallery-image {
   opacity: 0.7;
   transform: scale(0.98);
-}
-
-/* Progress Bar - Now positioned below the image */
-.gallery-progress {
-  width: 80%;
-  height: 8px;
-  background: #f8fafc;
-  border-radius: 0;
-  overflow: hidden;
-  backdrop-filter: none;
-  margin: 1rem auto 0 auto;
-  position: relative;
-  border: 2px solid #000000;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
-}
-
-.gallery-progress-bar {
-  height: 100%;
-  background: #000000;
-  border-radius: 0;
-  width: 20%;
-  transition: width 0.6s ease;
-  position: relative;
-}
-
-.gallery-progress-bar::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: progressShine 2s ease-in-out infinite;
 }
 
 /* Mobile Responsive */
@@ -301,14 +277,16 @@
   }
   
   .gallery-container {
-    max-width: 25rem;
+    max-width: 30rem;
     margin: 0 auto;
+    aspect-ratio: 4/5;
+    border: 5px solid #000000;
+    box-shadow: 10px 10px 0px #000000;
   }
   
-  .gallery-progress {
-    width: 85%;
-    height: 6px;
-    margin: 1rem auto 0 auto;
+  .gallery-container:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 12px 12px 0px #000000;
   }
 }
 
@@ -335,14 +313,17 @@
   }
   
   .gallery-container {
-    max-width: 20rem;
+    max-width: 24rem;
+    aspect-ratio: 5/6;
+    border: 4px solid #000000;
+    box-shadow: 8px 8px 0px #000000;
   }
   
-  .gallery-progress {
-    width: 90%;
-    height: 4px;
-    margin: 0.8rem auto 0 auto;
+  .gallery-container:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0px #000000;
   }
+  
   .about .row .content{
     padding: 3rem;
   }
@@ -354,23 +335,19 @@
   }
   
   .gallery-container {
-    max-width: 18rem;
+    max-width: 20rem;
+    aspect-ratio: 1/1;
+    border: 3px solid #000000;
+    box-shadow: 6px 6px 0px #000000;
+  }
+  
+  .gallery-container:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 8px 8px 0px #000000;
   }
 }
 
 /* Neobrutalism Animations */
-@keyframes progressShine {
-  0% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
 @keyframes borderGlow {
   0% {
     background-position: 0% 50%;

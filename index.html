@@ -44,9 +44,18 @@
   <body>
     <!-- navbar starts -->
     <header>
-      <a href="/" class="logo"><i class="fab fa-python"></i> sam</a>
+      <div class="navbar-left">
+        <a href="/" class="logo"><i class="fab fa-python"></i> sam</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
 
-      <div id="menu" class="fas fa-bars"></div>
+      <div class="navbar-controls">
+        <div id="menu" class="fas fa-bars"></div>
+      </div>
+      
       <nav class="navbar">
         <ul>
           <li><a class="active" href="#home">Home</a></li>
@@ -63,9 +72,6 @@
 
     <!-- hero section starts -->
     <section class="home" id="home">
-      <!-- Particle background -->
-      <div id="particles-js"></div>
-
       <!-- Main content -->
       <div class="content">
         <h2>
@@ -369,11 +375,11 @@
           <div class="content">
             <img
               src="./assets/images/logo/CSO.png"
-              alt="Cambridge CSO Website Design"
+              alt="Cambridge City Website Design"
             />
             <div>
               <div class="tag">
-                <h2>Cambridge CSO Website Design</h2>
+                <h2>Cambridge City Website Design</h2>
               </div>
               <div class="desc">
                 <h3>Web Developer</h3>
@@ -501,10 +507,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
-    <!-- particle.js links -->
-    <script src="./assets/js/particles.min.js"></script>
-    <script src="./assets/js/app.js"></script>
 
     <!-- vanilla tilt.js links -->
     <script
