@@ -10,13 +10,13 @@
     }
   },
   {
-    "name": "EventTask",
+    "name": "EventEase",
     "desc": "A to do app with AI integrated to generate tasks based on user input.",
     "image": "eventease",
     "category": "basicweb",
     "links": {
-      "view": "https://github.com/samnguyen3115/eventtask",
-      "code": "https://github.com/samnguyen3115/eventtask"
+      "view": "https://github.com/samnguyen3115/eventease",
+      "code": "https://github.com/samnguyen3115/eventease"
     }
   },
 

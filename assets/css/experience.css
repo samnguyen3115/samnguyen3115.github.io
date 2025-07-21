@@ -495,7 +495,7 @@
   margin-bottom: 30px;
   border: 2px solid var(--border-primary);
   padding: 20px;
-  background: var(--experience-background);
+  background: var(--experience-box-background);
   box-shadow: 6px 6px 0px var(--text-primary);
 }
 
@@ -512,7 +512,7 @@
 }
 
 .achievement-item {
-  background: var(--experience-background);
+  background: none;
   border: 2px solid var(--border-primary);
   padding: 18px;
   margin-bottom: 15px;

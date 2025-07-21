@@ -362,7 +362,22 @@
     <section class="project" id="project">
       <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects</h2>
 
-      <div class="box-container"></div>
+      <div class="box-container">
+        <div class="projects-carousel">
+          <button class="carousel-nav prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="projects-track" id="projectsTrack">
+            <!-- Projects will be dynamically loaded here -->
+          </div>
+          <button class="carousel-nav next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="carousel-indicators" id="carouselIndicators">
+          <!-- Indicators will be dynamically generated -->
+        </div>
+      </div>
     </section>
     <!-- project section ends -->
 
