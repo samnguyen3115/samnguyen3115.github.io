@@ -794,8 +794,6 @@ header .navbar ul li a.active:hover {
   left: 100%;
 }
 
-.social-icons a:active,
-.social-icons a:focus,
 .social-icons a:hover {
   color: #ffffff;
   transform: translate(-3px, -3px);
