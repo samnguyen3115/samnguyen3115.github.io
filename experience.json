@@ -1,30 +1,25 @@
 {
   "cso": {
-    "company": "Cambridge CSO Website Design",
+    "company": "Cambridge City, Massachusetts",
     "position": "Web Developer",
     "period": "March 2025 - Present",
     "achievements": [
       {
         "title": "Website Redesign Project",
-        "description": "Led the complete redesign of the Cambridge CSO website, improving user experience and modernizing the interface.",
-        "date": "March 2025"
+        "description": "Led the complete redesign of the Cambridge CSO website, improving user experience and modernizing the interface."
       },
       {
         "title": "Performance Optimization",
-        "description": "Optimized website loading speed by 40% through code refactoring and image optimization.",
-        "date": "April 2025"
+        "description": "Optimized website loading speed by 40% through code refactoring and image optimization."
       },
       {
         "title": "SEO Implementation",
-        "description": "Implemented SEO best practices resulting in 60% increase in organic traffic.",
-        "date": "May 2025"
+        "description": "Implemented SEO best practices resulting in 60% increase in organic traffic."
       }
     ],
     "reports": [
       {
-        "title": "Monthly Performance Report",
-        "description": "Website analytics showing improved user engagement and reduced bounce rate.",
-        "date": "June 2025"
+        "lịnk": "Project Development Report"
       }
     ]
   },
@@ -35,30 +30,20 @@
     "achievements": [
       {
         "title": "API Development",
-        "description": "Developed RESTful APIs for internal applications using Java Spring Boot framework.",
-        "date": "June 2025"
+        "description": "Developed RESTful APIs for internal applications using Java Spring Boot framework."
       },
       {
         "title": "Database Optimization",
-        "description": "Optimized database queries resulting in 25% faster response times.",
-        "date": "July 2025"
+        "description": "Optimized database queries resulting in 25% faster response times."
       },
       {
         "title": "Code Review Process",
-        "description": "Implemented automated code review process improving code quality and reducing bugs by 30%.",
-        "date": "August 2025"
+        "description": "Implemented automated code review process improving code quality and reducing bugs by 30%."
       }
     ],
     "reports": [
       {
-        "title": "Intern Final Report",
-        "description": "Comprehensive report on internship activities and contributions to various projects.",
-        "date": "August 2025"
-      },
-      {
-        "title": "Technical Documentation",
-        "description": "Created detailed technical documentation for developed APIs and database schemas.",
-        "date": "August 2025"
+        "lịnk": "Project Development Report"
       }
     ]
   },
@@ -68,31 +53,21 @@
     "period": "May 2024 - August 2024",
     "achievements": [
       {
-        "title": "Research Publication",
-        "description": "Co-authored research paper on machine learning applications in computer vision.",
-        "date": "July 2024"
+        "title": "Class Registration Portal Development",
+        "description": "Collaborated with professor to develop a comprehensive class registration portal system for students to apply for class enrollment, TA, and SA positions."
       },
       {
-        "title": "Data Analysis Project",
-        "description": "Conducted comprehensive data analysis on large datasets using Python and R.",
-        "date": "June 2024"
+        "title": "Full-Stack Web Application",
+        "description": "Built end-to-end web application with user authentication, application management, and administrative dashboard features."
       },
       {
-        "title": "Algorithm Development",
-        "description": "Developed novel algorithms for image processing applications.",
-        "date": "August 2024"
+        "title": "Database Design & Implementation",
+        "description": "Designed and implemented database schema to manage student applications, course information, and position assignments."
       }
     ],
     "reports": [
       {
-        "title": "Research Progress Report",
-        "description": "Monthly progress reports documenting research findings and methodologies.",
-        "date": "August 2024"
-      },
-      {
-        "title": "Final Research Summary",
-        "description": "Comprehensive summary of research work and findings during the summer program.",
-        "date": "August 2024"
+        "lịnk": "Project Development Report"
       }
     ]
   }
