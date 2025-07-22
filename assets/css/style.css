@@ -798,8 +798,6 @@ header .navbar ul li a.active:hover {
 .social-icons a:focus,
 .social-icons a:hover {
   color: #ffffff;
-  background: #ff0080;
-  border-color: #ff0080;
   transform: translate(-3px, -3px);
 }
 
