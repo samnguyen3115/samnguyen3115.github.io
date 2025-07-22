@@ -1,30 +1,25 @@
 {
   "cso": {
-    "company": "Cambridge CSO Website Design",
-    "position": "Web Developer",
+    "company": "Cambridge City Website Design",
+    "position": "Full-Stack Web Developer",
     "period": "March 2025 - Present",
     "achievements": [
       {
-        "title": "Website Redesign Project",
-        "description": "Led the complete redesign of the Cambridge CSO website, improving user experience and modernizing the interface.",
-        "date": "March 2025"
+        "title": "CSO Reporting Platform Development",
+        "description": "Led development team to build comprehensive website for Cambridge City tracking Combined Sewer Overflow problems with modern UI/UX and robust backend infrastructure."
       },
       {
-        "title": "Performance Optimization",
-        "description": "Optimized website loading speed by 40% through code refactoring and image optimization.",
-        "date": "April 2025"
+        "title": "Multilingual & Document Management Implementation",
+        "description": "Implemented full multilingual support and built sophisticated document management system for organizing CSO reports and regulatory compliance materials."
       },
       {
-        "title": "SEO Implementation",
-        "description": "Implemented SEO best practices resulting in 60% increase in organic traffic.",
-        "date": "May 2025"
+        "title": "Performance & Architecture Optimization",
+        "description": "Architected scalable solution using cutting-edge frameworks with advanced caching and responsive design, achieving 40% faster load times."
       }
     ],
     "reports": [
       {
-        "title": "Monthly Performance Report",
-        "description": "Website analytics showing improved user engagement and reduced bounce rate.",
-        "date": "June 2025"
+        "link": "https://drive.google.com/file/d/YOUR_PDF_ID_HERE/view?usp=sharing"
       }
     ]
   },
@@ -34,65 +29,45 @@
     "period": "May 2025 - August 2025",
     "achievements": [
       {
-        "title": "API Development",
-        "description": "Developed RESTful APIs for internal applications using Java Spring Boot framework.",
-        "date": "June 2025"
+        "title": "RESTful API Development",
+        "description": "Developed enterprise-grade RESTful APIs for internal applications using Java Spring Boot framework."
       },
       {
-        "title": "Database Optimization",
-        "description": "Optimized database queries resulting in 25% faster response times.",
-        "date": "July 2025"
+        "title": "Database Performance Optimization",
+        "description": "Optimized complex database queries and implemented caching strategies, resulting in 25% faster response times."
       },
       {
-        "title": "Code Review Process",
-        "description": "Implemented automated code review process improving code quality and reducing bugs by 30%.",
-        "date": "August 2025"
+        "title": "Code Quality & Review Process",
+        "description": "Implemented automated code review workflows and quality assurance processes, reducing bugs by 30% and improving team collaboration."
       }
     ],
     "reports": [
       {
-        "title": "Intern Final Report",
-        "description": "Comprehensive report on internship activities and contributions to various projects.",
-        "date": "August 2025"
-      },
-      {
-        "title": "Technical Documentation",
-        "description": "Created detailed technical documentation for developed APIs and database schemas.",
-        "date": "August 2025"
+        "link": "https://drive.google.com/file/d/YOUR_PDF_ID_HERE/view?usp=sharing"
       }
     ]
   },
   "wpi": {
     "company": "Worcester Polytechnic Institute",
-    "position": "Researcher",
+    "position": "Research Assistant & Software Developer",
     "period": "May 2024 - August 2024",
     "achievements": [
       {
-        "title": "Research Publication",
-        "description": "Co-authored research paper on machine learning applications in computer vision.",
-        "date": "July 2024"
+        "title": "Academic Portal Development",
+        "description": "Collaborated with professor to develop comprehensive web portal enabling course registration and SA/TA applications using modern web technologies."
       },
       {
-        "title": "Data Analysis Project",
-        "description": "Conducted comprehensive data analysis on large datasets using Python and R.",
-        "date": "June 2024"
+        "title": "Database Architecture & API Design",
+        "description": "Designed robust database schemas for course management and application workflows. Developed RESTful APIs for seamless frontend-backend integration."
       },
       {
-        "title": "Algorithm Development",
-        "description": "Developed novel algorithms for image processing applications.",
-        "date": "August 2024"
+        "title": "Application Management Automation",
+        "description": "Created automated application review system for SA/TA positions with tracking, notifications, and administrative workflows, reducing processing time by 60%."
       }
     ],
     "reports": [
       {
-        "title": "Research Progress Report",
-        "description": "Monthly progress reports documenting research findings and methodologies.",
-        "date": "August 2024"
-      },
-      {
-        "title": "Final Research Summary",
-        "description": "Comprehensive summary of research work and findings during the summer program.",
-        "date": "August 2024"
+        "link": "https://drive.google.com/file/d/YOUR_PDF_ID_HERE/view?usp=sharing"
       }
     ]
   }

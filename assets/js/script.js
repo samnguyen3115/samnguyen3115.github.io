@@ -124,7 +124,19 @@ $(document).ready(function () {
                 modalPosition.textContent = `${data.position} | ${data.period}`;
                 
                 let modalContent = '';
-                
+                if (data.reports.length > 0) {
+                    const report = data.reports[0]; // Get the first (and only) report
+                    modalContent += `
+                        <a href="${report.link}" target="_blank" class="report-section-button">
+                            <div class="report-section">
+                                <h3>
+                                    View Report
+                                    <i class="fas fa-external-link-alt"></i>
+                                </h3>
+                            </div>
+                        </a>
+                    `;
+                }
                 if (data.achievements.length > 0) {
                     modalContent += '<div class="achievement-section">';
                     modalContent += '<h3>Achievements</h3>';
@@ -133,27 +145,13 @@ $(document).ready(function () {
                             <div class="achievement-item">
                                 <h4>${achievement.title}</h4>
                                 <p>${achievement.description}</p>
-                                <div class="date">${achievement.date}</div>
                             </div>
                         `;
                     });
                     modalContent += '</div>';
                 }
                 
-                if (data.reports.length > 0) {
-                    modalContent += '<div class="achievement-section">';
-                    modalContent += '<h3>Reports & Documentation</h3>';
-                    data.reports.forEach(report => {
-                        modalContent += `
-                            <div class="achievement-item">
-                                <h4>${report.title}</h4>
-                                <p>${report.description}</p>
-                                <div class="date">${report.date}</div>
-                            </div>
-                        `;
-                    });
-                    modalContent += '</div>';
-                }
+                
                 
                 modalBody.innerHTML = modalContent;
                 modal.style.display = 'block';
@@ -385,6 +383,12 @@ async function fetchData(name = "skills") {
 
 
 
+
+function showSkills(skills) {
+    // This function handles skills display - currently skills are handled in HTML directly
+    // but keeping this function to prevent JavaScript errors
+    console.log('Skills loaded:', skills);
+}
 
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#project .box-container");
