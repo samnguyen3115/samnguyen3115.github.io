@@ -166,6 +166,7 @@
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
   will-change: transform;
   box-shadow: 4px 4px 0px var(--shadow-primary);
+  margin-bottom: 20px;
 }
 
 .button-certificate button:hover {
