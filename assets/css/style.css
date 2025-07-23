@@ -470,7 +470,7 @@ header .navbar ul li a.active:hover {
     display: block;
     padding: 1.2rem 1.5rem;
     text-align: left;
-    color: var(--text-primary);
+    color: var(--bg-primary);
     font-size: 1.8rem;
     border-radius: 0.5rem;
     position: relative;
