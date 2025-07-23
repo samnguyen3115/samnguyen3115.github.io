@@ -441,7 +441,7 @@ header .navbar ul li a.active:hover {
     height: calc(100vh - 6.5rem);
     text-align: left;
     align-items: flex-start;
-    background-color: var(--bg-secondary);
+    background-color: var(--text-primary);
     border-left: 1px solid var(--border-primary);
     backdrop-filter: blur(10px);
     overflow-y: auto;
