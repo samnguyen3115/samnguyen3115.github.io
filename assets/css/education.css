@@ -144,12 +144,12 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.button-certificate  {
+.button-certificate {
   display: flex;
   justify-content: flex-start;
   padding-top: 20px;
 }
-.button-certificate button{
+.button-certificate button {
   color: var(--bg-primary);
   border: none;
   outline: none;
@@ -166,6 +166,7 @@
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
   will-change: transform;
   box-shadow: 4px 4px 0px var(--shadow-primary);
+  margin-bottom: 20px;
 }
 
 .button-certificate button:hover {
@@ -197,6 +198,10 @@
 }
 /* education media queries starts*/
 @media screen and (max-width: 600px) {
+  .education .box-container .box .achievement-img img {
+    width: 50px;
+    height: 50px;
+  }
   .education .box-container .achievement {
     width: 100%;
   }
@@ -209,8 +214,8 @@
     height: 25rem;
   }
   .education .box-container .box img {
-    width: 300px !important;
-    height: 300px !important;
+    width: 250px !important;
+    height: 250px !important;
   }
   .education .box-container .box .content {
     position: relative;

@@ -117,6 +117,7 @@
 .project .desc .btns .btn:hover {
   background: #000000;
   color: rgb(255, 255, 255);
+  border: 3px solid white;
 }
 .project .viewall {
   display: flex;

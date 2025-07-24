@@ -1,25 +1,25 @@
 {
   "cso": {
-    "company": "Cambridge City, Massachusetts",
-    "position": "Web Developer",
+    "company": "Cambridge City Website Design",
+    "position": "Full-Stack Web Developer",
     "period": "March 2025 - Present",
     "achievements": [
       {
-        "title": "Website Redesign Project",
-        "description": "Led the complete redesign of the Cambridge CSO website, improving user experience and modernizing the interface."
+        "title": "CSO Reporting Platform Development",
+        "description": "Led development team to build comprehensive website for Cambridge City tracking Combined Sewer Overflow problems with modern UI/UX and robust backend infrastructure."
       },
       {
-        "title": "Performance Optimization",
-        "description": "Optimized website loading speed by 40% through code refactoring and image optimization."
+        "title": "Multilingual & Document Management Implementation",
+        "description": "Implemented full multilingual support and built sophisticated document management system for organizing CSO reports and regulatory compliance materials."
       },
       {
-        "title": "SEO Implementation",
-        "description": "Implemented SEO best practices resulting in 60% increase in organic traffic."
+        "title": "Performance & Architecture Optimization",
+        "description": "Architected scalable solution using cutting-edge frameworks with advanced caching and responsive design, achieving 40% faster load times."
       }
     ],
     "reports": [
       {
-        "lịnk": "Project Development Report"
+        "link": "https://drive.google.com/file/d/YOUR_PDF_ID_HERE/view?usp=sharing"
       }
     ]
   },
@@ -29,45 +29,45 @@
     "period": "May 2025 - August 2025",
     "achievements": [
       {
-        "title": "API Development",
-        "description": "Developed RESTful APIs for internal applications using Java Spring Boot framework."
+        "title": "RESTful API Development",
+        "description": "Developed enterprise-grade RESTful APIs for internal applications using Java Spring Boot framework."
       },
       {
-        "title": "Database Optimization",
-        "description": "Optimized database queries resulting in 25% faster response times."
+        "title": "Database Performance Optimization",
+        "description": "Optimized complex database queries and implemented caching strategies, resulting in 25% faster response times."
       },
       {
-        "title": "Code Review Process",
-        "description": "Implemented automated code review process improving code quality and reducing bugs by 30%."
+        "title": "Code Quality & Review Process",
+        "description": "Implemented automated code review workflows and quality assurance processes, reducing bugs by 30% and improving team collaboration."
       }
     ],
     "reports": [
       {
-        "lịnk": "Project Development Report"
+        "link": "https://drive.google.com/file/d/YOUR_PDF_ID_HERE/view?usp=sharing"
       }
     ]
   },
   "wpi": {
     "company": "Worcester Polytechnic Institute",
-    "position": "Researcher",
+    "position": "Research Assistant & Software Developer",
     "period": "May 2024 - August 2024",
     "achievements": [
       {
-        "title": "Class Registration Portal Development",
-        "description": "Collaborated with professor to develop a comprehensive class registration portal system for students to apply for class enrollment, TA, and SA positions."
+        "title": "Academic Portal Development",
+        "description": "Collaborated with professor to develop comprehensive web portal enabling course registration and SA/TA applications using modern web technologies."
       },
       {
-        "title": "Full-Stack Web Application",
-        "description": "Built end-to-end web application with user authentication, application management, and administrative dashboard features."
+        "title": "Database Architecture & API Design",
+        "description": "Designed robust database schemas for course management and application workflows. Developed RESTful APIs for seamless frontend-backend integration."
       },
       {
-        "title": "Database Design & Implementation",
-        "description": "Designed and implemented database schema to manage student applications, course information, and position assignments."
+        "title": "Application Management Automation",
+        "description": "Created automated application review system for SA/TA positions with tracking, notifications, and administrative workflows, reducing processing time by 60%."
       }
     ],
     "reports": [
       {
-        "lịnk": "Project Development Report"
+        "link": "https://drive.google.com/file/d/YOUR_PDF_ID_HERE/view?usp=sharing"
       }
     ]
   }
