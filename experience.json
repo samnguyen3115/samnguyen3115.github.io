@@ -17,11 +17,7 @@
         "description": "Architected scalable solution using cutting-edge frameworks with advanced caching and responsive design, achieving 40% faster load times."
       }
     ],
-    "reports": [
-      {
-        "link": "https://drive.google.com/file/d/YOUR_PDF_ID_HERE/view?usp=sharing"
-      }
-    ]
+    "reports": []
   },
   "hitachi": {
     "company": "Hitachi Digital Service Vietnam",
@@ -29,16 +25,20 @@
     "period": "May 2025 - August 2025",
     "achievements": [
       {
-        "title": "RESTful API Development",
-        "description": "Developed enterprise-grade RESTful APIs for internal applications using Java Spring Boot framework."
+        "title": " Backend Development",
+        "description": "Developed 30+ backend features for an IoT platform using FastAPI and PostgreSQL, including telemetry ingestion, role-based access control (RBAC), real-time WebSocket updates, and predictive air quality modeling via C++ integration."
       },
       {
-        "title": "Database Performance Optimization",
-        "description": "Optimized complex database queries and implemented caching strategies, resulting in 25% faster response times."
+        "title": "Building Analytics & Performance Optimization",
+        "description": "Created advanced building dashboards with rolling averages, CO₂ anomaly detection, and busiest-hour metrics, optimizing database performance using JSONB indexes, GIN indexing, and CTEs."
       },
       {
-        "title": "Code Quality & Review Process",
-        "description": "Implemented automated code review workflows and quality assurance processes, reducing bugs by 30% and improving team collaboration."
+        "title": "Distributed Configuration Management",
+        "description": "Implemented atomic multi-system configuration updates using the Saga pattern with audit logging and rollback to ensure data integrity across services."
+      },
+      {
+        "title": "DevOps Automation Pipeline",
+        "description": "Built an automated workflow to extract Redmine issue data, transform to Parquet/CSV formats, and upload to Azure Storage or shared folders with robust error handling and retry logic."
       }
     ],
     "reports": [
@@ -65,10 +65,6 @@
         "description": "Created automated application review system for SA/TA positions with tracking, notifications, and administrative workflows, reducing processing time by 60%."
       }
     ],
-    "reports": [
-      {
-        "link": "https://drive.google.com/file/d/YOUR_PDF_ID_HERE/view?usp=sharing"
-      }
-    ]
+    "reports": []
   }
 }
