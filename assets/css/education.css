@@ -18,23 +18,6 @@
   box-shadow: 9px 9px 0px var(--border-primary);
 }
 
-.education .qoute {
-  font-size: 2.4rem;
-  text-align: center;
-  font-family: "JetBrains Mono", monospace;
-  font-weight: 700;
-  margin-top: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.education .qoute::before {
-  content: "// ";
-}
-
-.education .qoute::after {
-  content: " //";
-}
 
 .education .heading .h1 {
   color: var(--accent-primary) !important;
@@ -234,7 +217,6 @@
 }
 /* education media queries ends*/
 
-/* Neobrutalism Animations */
 @keyframes borderGlow {
   0% {
     background-position: 0% 50%;
