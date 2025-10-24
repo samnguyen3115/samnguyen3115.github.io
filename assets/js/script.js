@@ -75,8 +75,8 @@ $(document).ready(function () {
         });
     });
 
-    // smooth scrolling with 100px offset
-    $('a[href*="#"]').on('click', function (e) {
+    // smooth scrolling with 100px offset - only for internal links
+    $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
         const target = $($(this).attr('href'));
         if (target.length) {
@@ -102,6 +102,31 @@ $(document).ready(function () {
         event.preventDefault();
     });
     // <!-- emailjs to mail contact form data -->
+    // Coursework modal functionality
+    const courseworkModal = document.getElementById('courseworkModal');
+    const courseworkBtn = document.getElementById('courseworkBtn');
+    const courseworkCloseBtn = courseworkModal.querySelector('.close');
+
+    courseworkBtn.addEventListener('click', function() {
+        courseworkModal.style.display = 'block';
+    });
+
+    courseworkCloseBtn.addEventListener('click', function() {
+        courseworkModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === courseworkModal) {
+            courseworkModal.style.display = 'none';
+        }
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && courseworkModal.style.display === 'block') {
+            courseworkModal.style.display = 'none';
+        }
+    });
+
     // Experience modal functionality
     let experienceData = null
     fetchData("experience").then(data => {
@@ -130,7 +155,7 @@ $(document).ready(function () {
                         <a href="${report.link}" target="_blank" class="report-section-button">
                             <div class="report-section">
                                 <h3>
-                                    View Report
+                                    View Internship Evaluation
                                     <i class="fas fa-external-link-alt"></i>
                                 </h3>
                             </div>
@@ -143,7 +168,6 @@ $(document).ready(function () {
                     data.achievements.forEach(achievement => {
                         modalContent += `
                             <div class="achievement-item">
-                                <h4>${achievement.title}</h4>
                                 <p>${achievement.description}</p>
                             </div>
                         `;
@@ -359,7 +383,7 @@ $(document).ready(function () {
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Student", "backend developer","web developer"],
+    strings: ["Student", "Software Engineer","Web Developer"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,

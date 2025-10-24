@@ -154,7 +154,7 @@ section {
 }
 
 /* Mobile section adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   section {
     padding: 8rem 3% 3rem 3%;
   }
@@ -387,7 +387,7 @@ header .navbar ul li a.active:hover {
   border-color: var(--border-primary);
   color: var(--bg-primary);
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   #menu {
     display: block;
   }
@@ -495,7 +495,7 @@ header .navbar ul li a.active:hover {
 }
 
 /* Ensure navbar works properly on larger screens */
-@media (min-width: 769px) {
+@media (min-width: 1300px) {
   header .navbar {
     position: static !important;
     width: auto !important;
@@ -815,7 +815,7 @@ header .navbar ul li a.active:hover {
 /* social icons end */
 
 /* hero media queries starts*/
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .home {
     flex-direction: column;
     text-align: center;

@@ -156,10 +156,10 @@
         </div>
         <div class="content">
           <h3>I'm Sam</h3>
-          <span class="tag">Backend Developer</span>
+          <span class="tag">Software Engineer</span>
 
           <p>
-            I'm a full-stack developer and student passionate about building
+            I'm a software engineer and student passionate about building
             clean, efficient software. From user-friendly interfaces to scalable
             back-end systems, I love turning real-world problems into working
             solutions.
@@ -224,16 +224,21 @@
             <h3>Bachelor of Engineering in Computer Science</h3>
             <p>Worcester Polytechnic Institute | WPI</p>
             <h4>2023-2027 | Pursuing</h4>
-            <a
-              href="https://www.wpi.edu/academics"
-              target="_blank"
-              rel="noopener noreferrer"
-              style="text-decoration: none; color: inherit"
-            >
+            <div class="education-buttons">
+              <a
+                href="https://www.wpi.edu/academics"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="text-decoration: none; color: inherit"
+              >
+                <div class="button-certificate">
+                  <button type="button">Learn More About WPI</button>
+                </div>
+              </a>
               <div class="button-certificate">
-                <button type="button">Learn More About WPI</button>
+                <button type="button" id="courseworkBtn">View Related Coursework</button>
               </div>
-            </a>
+            </div>
           </div>
         </div>
         <div class="box achievement">
@@ -294,6 +299,13 @@
                   alt="Python"
                 />
                 <span>Python</span>
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                  alt="Java"
+                />
+                <span>Java</span>
               </div>
               <div class="skill-item">
                 <img
@@ -605,6 +617,65 @@
         </div>
         <div class="modal-body" id="modalBody">
           <!-- Content will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Coursework Modal -->
+    <div id="courseworkModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header" style = "background-color:#baedff;">
+          <div>
+            <h2>Related Coursework</h2>
+          </div>
+          <span class="close" style = "background-color:#baedff;" >&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="course-section">
+              <div class="course-buttons">
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-2102" class="course-btn" target="_blank">
+                  <i class="fas fa-cube"></i> Object-Oriented Design Concepts
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-4233" class="course-btn" target="_blank">
+                  <i class="fas fa-cubes"></i> OOP Analysis And Design
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-2223" class="course-btn" target="_blank">
+                  <i class="fas fa-sitemap"></i> Algorithms
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-4120" class="course-btn" target="_blank">
+                  <i class="fas fa-sitemap"></i> Analysis Of Algorithms
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-2303" class="course-btn" target="_blank">
+                  <i class="fas fa-microchip"></i> Systems Programming Concepts
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-3431" class="course-btn" target="_blank">
+                  <i class="fas fa-database"></i> Database Systems I
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-4432" class="course-btn" target="_blank">
+                  <i class="fas fa-server"></i> Database Systems II
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-3733" class="course-btn" target="_blank">
+                  <i class="fas fa-cogs"></i> Software Engineering
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-3013" class="course-btn" target="_blank">
+                  <i class="fas fa-desktop"></i> Operating Systems
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-3041" class="course-btn" target="_blank">
+                  <i class="fas fa-users"></i> Human-Computer Interaction
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-4241" class="course-btn" target="_blank">
+                  <i class="fas fa-globe"></i> Webware
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-4401" class="course-btn" target="_blank">
+                  <i class="fas fa-shield-alt"></i> Software Security Engineering
+                </a>
+                <a href="https://www.wpi.edu/academics/calendar-courses/course-descriptions/3776/computer-science#CS-536" class="course-btn" target="_blank">
+                  <i class="fas fa-code"></i> Programming Language Design
+                </a>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

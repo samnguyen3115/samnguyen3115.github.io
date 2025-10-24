@@ -253,32 +253,8 @@
   }
 }
 
-/* Medium screens transition */
-@media (max-width: 900px) {
-  .experience .container {
-    width: 45%;
-    padding: 6px 15px;
-  }
-  
-  .experience img {
-    width: 90px;
-  }
-  
-  .experience .tag h2 {
-    font-size: 1.9rem;
-  }
-  
-  .experience .desc h3 {
-    font-size: 1.6rem;
-  }
-  
-  .experience .desc p {
-    font-size: 1.4rem;
-  }
-}
-
 /* Mobile and small tablet screens */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .experience .timeline {
     padding: 1.5rem 0.5rem;
   }
