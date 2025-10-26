@@ -75,8 +75,8 @@ $(document).ready(function () {
         });
     });
 
-    // smooth scrolling with 100px offset - only for internal links
-    $('a[href^="#"]').on('click', function (e) {
+    // smooth scrolling with 100px offset
+    $('a[href*="#"]').on('click', function (e) {
         e.preventDefault();
         const target = $($(this).attr('href'));
         if (target.length) {
@@ -102,31 +102,6 @@ $(document).ready(function () {
         event.preventDefault();
     });
     // <!-- emailjs to mail contact form data -->
-    // Coursework modal functionality
-    const courseworkModal = document.getElementById('courseworkModal');
-    const courseworkBtn = document.getElementById('courseworkBtn');
-    const courseworkCloseBtn = courseworkModal.querySelector('.close');
-
-    courseworkBtn.addEventListener('click', function() {
-        courseworkModal.style.display = 'block';
-    });
-
-    courseworkCloseBtn.addEventListener('click', function() {
-        courseworkModal.style.display = 'none';
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target === courseworkModal) {
-            courseworkModal.style.display = 'none';
-        }
-    });
-
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && courseworkModal.style.display === 'block') {
-            courseworkModal.style.display = 'none';
-        }
-    });
-
     // Experience modal functionality
     let experienceData = null
     fetchData("experience").then(data => {
@@ -155,7 +130,7 @@ $(document).ready(function () {
                         <a href="${report.link}" target="_blank" class="report-section-button">
                             <div class="report-section">
                                 <h3>
-                                    View Internship Evaluation
+                                    View Report
                                     <i class="fas fa-external-link-alt"></i>
                                 </h3>
                             </div>
@@ -383,7 +358,7 @@ $(document).ready(function () {
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Student", "Software Engineer","Web Developer"],
+    strings: ["Student", "backend developer","web developer"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -518,8 +493,8 @@ srtop.reveal('.home .content .btn', { delay: 200 });
 srtop.reveal('.home .image', { delay: 400 });
 srtop.reveal('.home .linkedin', { interval: 600 });
 srtop.reveal('.home .github', { interval: 800 });
-srtop.reveal('.home .twitter', { interval: 1000 });
-srtop.reveal('.home .telegram', { interval: 600 });
+srtop.reveal('.home .phone', { interval: 1000 });
+srtop.reveal('.home .email', { interval: 600 });
 srtop.reveal('.home .instagram', { interval: 600 });
 srtop.reveal('.home .dev', { interval: 600 });
 
