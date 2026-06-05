@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yelp Dataset Challenge | Project Details</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/shared.css" />
+  <link rel="stylesheet" href="./assets/css/project-detail.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- navbar starts -->
+  <header>
+    <div class="navbar-left">
+      <a href="/" class="logo"><i class="fab fa-python"></i> sam</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <div class="navbar-controls">
+      <div id="menu" class="fas fa-bars"></div>
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="./index.html#home">Home</a></li>
+        <li><a href="./index.html#about">About</a></li>
+        <li><a href="./index.html#education">Education</a></li>
+        <li><a href="./index.html#skills">Skills</a></li>
+        <li><a href="./index.html#project" class="active">Projects</a></li>
+        <li><a href="./index.html#experience">Experience</a></li>
+        <li><a href="./index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- navbar ends -->
+
+  <main class="project-detail-container">
+    <!-- Header Banner -->
+    <div class="project-detail-header">
+      <div class="project-title-area">
+        <h1>Yelp Dataset Challenge</h1>
+        <div class="project-subtitle">Predicting Business Closure and Key Attributes</div>
+      </div>
+      <button class="back-btn" onclick="window.location.href='./index.html#project'">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </button>
+    </div>
+
+    <!-- Main Layout Grid -->
+    <div class="project-grid">
+      <!-- Left Side: Project details -->
+      <div class="project-main-content">
+        <!-- Overview Card -->
+        <div class="project-card">
+          <h2>About the Project</h2>
+          <p>
+            This project addresses two critical challenges in business analysis using the Yelp dataset: predicting
+            business closure and predicting key business attributes (such as price range, outdoor seating, and takeout
+            availability). The analysis is built upon a substantial subset of the Yelp dataset consisting of
+            approximately 150,000 businesses, 6.9 million reviews, and 200,000 pictures.
+          </p>
+          <p>
+            Predicting whether a business is active or closed is formulated as a binary classification problem.
+            Collaborative filtering techniques (Matrix Factorization / SVD) are leveraged to predict business amenities
+            and attributes based on user-business interactions, helping customers find businesses that fit their
+            preferences.
+          </p>
+        </div>
+
+        <!-- Features & Methods Card -->
+        <div class="project-card">
+          <h2>Methodology & Models</h2>
+          <ul class="project-list">
+            <li><strong>Business Closure Classification</strong> - Trained and evaluated three model structures
+              (Logistic Regression, Random Forests, and Gradient Boosting via XGBoost) to classify if a business is
+              active or closed.</li>
+            <li><strong>Feature Engineering</strong> - Extracted features across business details (categories, location,
+              stars), review sentiment analytics, and user metrics (check-in frequency, ratio of reviews from elite
+              users).</li>
+            <li><strong>Attribute Recommendation (SVD)</strong> - Formulated amenity prediction as a recommendation
+              system, treating business attributes as ratings and user reviews as interactions to predict price range,
+              seating, and takeout.</li>
+            <li><strong>Evaluation Rigor</strong> - Evaluated classification models using Accuracy, Precision, Recall,
+              and F1-score; SVD predictions were validated using Root Mean Squared Error (RMSE).</li>
+          </ul>
+        </div>
+
+        <!-- Results Card -->
+        <div class="project-card">
+          <h2>Results & Analysis</h2>
+          <p><strong>1. Business Closure Prediction Results:</strong></p>
+          <table class="meta-info-table" style="margin-bottom: 3rem;">
+            <thead>
+              <tr style="font-weight: bold; border-bottom: 2px solid var(--border-primary);">
+                <td>Model</td>
+                <td>Accuracy</td>
+                <td>Precision</td>
+                <td>Recall</td>
+                <td>F1-score</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Logistic Regression</td>
+                <td>0.812</td>
+                <td>0.756</td>
+                <td>0.623</td>
+                <td>0.683</td>
+              </tr>
+              <tr>
+                <td>Random Forest</td>
+                <td>0.854</td>
+                <td>0.812</td>
+                <td>0.734</td>
+                <td>0.771</td>
+              </tr>
+              <tr style="font-weight: bold; background: rgba(0,0,0,0.05);">
+                <td>XGBoost</td>
+                <td>0.878</td>
+                <td>0.845</td>
+                <td>0.789</td>
+                <td>0.816</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><strong>2. Attribute Prediction Results (RMSE):</strong></p>
+          <table class="meta-info-table">
+            <thead>
+              <tr style="font-weight: bold; border-bottom: 2px solid var(--border-primary);">
+                <td>Predicted Attribute</td>
+                <td>RMSE</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Price Range</td>
+                <td>0.654</td>
+              </tr>
+              <tr>
+                <td>Outdoor Seating</td>
+                <td>0.421</td>
+              </tr>
+              <tr>
+                <td>Takeout Availability</td>
+                <td>0.389</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin-top: 2rem;">
+            XGBoost outperformed the other classifiers, achieving <strong>87.8% accuracy</strong>. Key contributors to
+            the prediction model included the average stars of a business, the check-in frequency, review sentiment, and
+            the proportion of elite reviewers. The collaborative filtering model achieved accurate predictions with RMSE
+            as low as <strong>0.389</strong>.
+          </p>
+        </div>
+
+        <!-- Media Card -->
+        <div class="project-card">
+          <h2>Project Media</h2>
+          <div style="border: 2px solid var(--border-primary); padding: 15px; background: var(--bg-primary);">
+            <img src="./assets/images/projects/yelp.png" alt="Yelp Challenge Visual"
+              style="width: 100%; height: auto; border: 1px solid var(--border-primary); display: block;" />
+            <div
+              style="margin-top: 12px; font-size: 1.5rem; font-family: 'JetBrains Mono', monospace; text-align: center; font-weight: bold;">
+              Yelp Dataset Challenge Data Visualization</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Sidebar Metadata & Tech Stack -->
+      <div class="project-sidebar">
+        <!-- Tech Stack Card -->
+        <div class="project-card">
+          <h2>Tech Stack</h2>
+          <div class="tech-grid">
+            <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+            <span class="tech-badge"><i class="fas fa-chart-line"></i> XGBoost</span>
+            <span class="tech-badge"><i class="fas fa-brain"></i> Scikit-learn</span>
+            <span class="tech-badge"><i class="fas fa-database"></i> SVD (Collab Filtering)</span>
+            <span class="tech-badge"><i class="fas fa-table"></i> Pandas / NumPy</span>
+            <span class="tech-badge"><i class="fas fa-book-open"></i> Jupyter Notebook</span>
+          </div>
+        </div>
+
+        <!-- Project Stats Card -->
+        <div class="project-card">
+          <h2>Project Metadata</h2>
+          <table class="meta-info-table">
+            <tr>
+              <td>Category</td>
+              <td>Data Science & ML</td>
+            </tr>
+            <tr>
+              <td>Dataset Size</td>
+              <td>150K Businesses, 6.9M Reviews</td>
+            </tr>
+            <tr>
+              <td>Paper Authors</td>
+              <td>A. Mathew, D. Nguyen, L. Nguyen, S. Nguyen</td>
+            </tr>
+            <tr>
+              <td>Institution</td>
+              <td>Worcester Polytechnic Institute (WPI)</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Action Buttons Card -->
+        <div class="project-card">
+          <h2>Links</h2>
+          <div class="project-actions">
+            <a href="https://github.com/abhayma1000/DS3010FinalProject" target="_blank" class="action-btn primary">
+              <i class="fab fa-github"></i> Repository
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Theme management script -->
+  <script>
+    // Theme toggling functionality
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Initialize theme on page load
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    themeToggle.addEventListener('click', function () {
+      const activeTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
+
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Mobile Menu functionality
+    const menuBtn = document.getElementById('menu');
+    const navbar = document.querySelector('.navbar');
+
+    menuBtn.addEventListener('click', function () {
+      this.classList.toggle('fa-times');
+      navbar.classList.toggle('nav-toggle');
+    });
+
+    // Close menu on navigation
+    document.querySelectorAll('.navbar ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.remove('fa-times');
+        navbar.classList.remove('nav-toggle');
+      });
+    });
+  </script>
+</body>
+
+</html>

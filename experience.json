@@ -1,4 +1,21 @@
 {
+  "robot-whisperer": {
+    "company": "The Robot Whisperer LLC",
+    "position": "Software Engineer Intern",
+    "period": "January 2026 - June 2026",
+    "achievements": [
+      {
+        "description": "Developed 30+ backend features for an IoT platform with FastAPI and PostgreSQL, including telemetry ingestion, RBAC, real-time WebSocket updates, and predictive air quality modeling."
+      },
+      {
+        "description": "Created building analytics dashboards with PostgreSQL to detect air-quality anomalies and peak usage trends, improving facility monitoring efficiency by 35%."
+      },
+      {
+        "description": "Implemented multi-system configuration updates using the Saga pattern with audit logging and rollback, reducing deployment errors across distributed services."
+      }
+    ],
+    "reports": []
+  },
   "cso": {
     "company": "Cambridge City Website Design",
     "position": "Web Developer Intern",

@@ -403,7 +403,7 @@ function showProjects(projects) {
         <div class="desc">
           <p>${project.desc}</p>
           <div class="btns">
-            <a href="${project.links.code}" class="btn" target="_blank">Learn More  <i class="fas fa-code"></i></a>
+            <a href="${project.links.view}" class="btn" target="_blank">Learn More  <i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
       </div>

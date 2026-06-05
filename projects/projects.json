@@ -1,11 +1,11 @@
 [
-    {
+  {
     "name": "Lost and Found",
     "desc": "A blog like lost and found web application that allows students to report lost items and found them.",
     "image": "lostandfound",
     "category": "basicweb",
     "links": {
-      "view": "https://github.com/samnguyen3115/lostandfound",
+      "view": "./projects/lostandfound.html",
       "code": "https://github.com/samnguyen3115/lostandfound"
     }
   },
@@ -15,19 +15,28 @@
     "image": "eventease",
     "category": "basicweb",
     "links": {
-      "view": "https://github.com/samnguyen3115/eventease",
+      "view": "./projects/eventease.html",
       "code": "https://github.com/samnguyen3115/eventease"
     }
   },
-
   {
     "name": "Yelp Dataset Challenge",
     "desc": "Generate and evaluate models that can be used to predict key attributes and the closure of a business.",
     "image": "yelp",
     "category": "basicweb",
     "links": {
-      "view": "https://github.com/abhayma1000/DS3010FinalProject",
+      "view": "./projects/yelp.html",
       "code": "https://github.com/abhayma1000/DS3010FinalProject"
+    }
+  },
+  {
+    "name": "MEV — Math Expression Validator",
+    "desc": "Aunit-aware symbolic expression framework that validates execution safety.",
+    "image": "mev",
+    "category": "basicweb",
+    "links": {
+      "view": "./projects/mev.html",
+      "code": "https://github.com/samnguyen3115/M.E.V"
     }
   }
 ]

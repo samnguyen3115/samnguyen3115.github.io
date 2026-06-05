@@ -1,587 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" />
-    <meta name="description" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/shared.css" />
-    <link rel="stylesheet" href="./assets/css/about.css" />
-    <link rel="stylesheet" href="./assets/css/education.css" />
-    <link rel="stylesheet" href="./assets/css/experience.css" />
-    <link rel="stylesheet" href="./assets/css/project.css" />
-    <link rel="stylesheet" href="./assets/css/skill.css" />
-    <link rel="stylesheet" href="./assets/css/contact.css" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Favicon -->
-    <link
-      id="favicon"
-      rel="shortcut icon"
-      href="./assets/images/hero.png"
-      type="image/x-png"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
-      rel="stylesheet"
-    />
 
-    <title>Portfolio | Sam Nguyen</title>
-  </head>
-  <!-- <body oncontextmenu="return false"> -->
-  <!-- pre loader -->
-  <!-- <div class="loader-container">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" />
+  <meta name="description" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/shared.css" />
+  <link rel="stylesheet" href="./assets/css/about.css" />
+  <link rel="stylesheet" href="./assets/css/education.css" />
+  <link rel="stylesheet" href="./assets/css/experience.css" />
+  <link rel="stylesheet" href="./assets/css/project.css" />
+  <link rel="stylesheet" href="./assets/css/skill.css" />
+  <link rel="stylesheet" href="./assets/css/contact.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link id="favicon" rel="shortcut icon" href="./assets/images/hero.png" type="image/x-png" />
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
+
+  <title>Portfolio | Sam Nguyen</title>
+</head>
+<!-- <body oncontextmenu="return false"> -->
+<!-- pre loader -->
+<!-- <div class="loader-container">
   <img draggable="false" src="./assets/images/preloader.gif" alt="">
 </div> -->
-  <body>
-    <!-- navbar starts -->
-    <header>
-      <div class="navbar-left">
-        <a href="/" class="logo"><i class="fab fa-python"></i> sam</a>
-        <button
-          id="theme-toggle"
-          class="theme-toggle"
-          aria-label="Toggle dark mode"
-        >
-          <i class="fas fa-sun"></i>
-          <i class="fas fa-moon"></i>
-        </button>
-      </div>
 
-      <div class="navbar-controls">
-        <div id="menu" class="fas fa-bars"></div>
-      </div>
+<body>
+  <!-- navbar starts -->
+  <header>
+    <div class="navbar-left">
+      <a href="/" class="logo"><i class="fab fa-python"></i> sam</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
 
-      <nav class="navbar">
-        <ul>
-          <li><a class="active" href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#project">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- navbar ends -->
+    <div class="navbar-controls">
+      <div id="menu" class="fas fa-bars"></div>
+    </div>
 
-    <!-- hero section starts -->
-    <section class="home" id="home">
-      <!-- Main content -->
-      <div class="content">
-        <h2>
-          Hi There,<br />
-          I'm <span>Sam Nguyen</span>
-        </h2>
-        <p>I am <span class="typing-text"></span></p>
+    <nav class="navbar">
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- navbar ends -->
 
-        <a href="https://drive.google.com/file/d/1P8yrjrfIx6eX4joo961KJIUFITHhz1G9/view?usp=sharing" target="_blank" class="btn">
-          <span>Resume</span>
-          <i class="fas fa-file-alt"></i>
-        </a>
+  <!-- hero section starts -->
+  <section class="home" id="home">
+    <!-- Main content -->
+    <div class="content">
+      <h2>
+        Hi There,<br />
+        I'm <span>Sam Nguyen</span>
+      </h2>
+      <p>I am <span class="typing-text"></span></p>
 
-        <!-- Social icons -->
-        <div class="socials">
-          <ul class="social-icons">
-            <li>
-              <a
-                class="linkedin"
-                aria-label="LinkedIn"
-                href="https://www.linkedin.com/in/tran-minh-duc-nguyen/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                class="github"
-                aria-label="GitHub"
-                href="https://github.com/samnguyen3115"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                class="email"
-                aria-label="Email"
-                href="mailto:ducsam.work@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fas fa-envelope"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                class="phone"
-                aria-label="Phone"
-                href="tel:+15083738550"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fas fa-phone"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <a href="https://drive.google.com/file/d/1P8yrjrfIx6eX4joo961KJIUFITHhz1G9/view?usp=sharing" target="_blank"
+        class="btn">
+        <span>Resume</span>
+        <i class="fas fa-file-alt"></i>
+      </a>
 
-      <!-- Image -->
-      <div class="image">
-          <div class="computer-frame">
-            <div class="computer-screen">
-              <div class="screen-content old-tv-container">
-                <div class="tv-image" style="background-image: url('./assets/images/profile/profile1.jpeg')"></div>
-                <div class="tv-effect">
-                  <div class="scan-lines"></div>
-                  <div class="noise"></div>
-                  <div class="tv-flicker"></div>
-                </div>
-                <div class="screen-glare"></div>
-              </div>
-            </div>
-            <div class="computer-base">
-              <div class="base-front"></div>
-            </div>
-          </div>
-    </section>
-
-    <!-- hero section ends -->
-    <!-- education section starts -->
-    <section class="education" id="education">
-      <h1 class="heading">
-        <i class="fas fa-graduation-cap"></i> Education and Certifications
-      </h1>
-
-      <div class="box-container">
-        <div class="box">
-          <div class="image">
-            <img
-              draggable="false"
-              src="./assets/images/logo/WPI.png"
-              alt=""
-              style="width: 300px"
-            />
-          </div>
-          <div class="content">
-            <h3>Bachelor of Engineering in Computer Science</h3>
-            <p>Worcester Polytechnic Institute | WPI</p>
-            <h4>2023-2027 | Pursuing</h4>
-            <a
-              href="https://www.wpi.edu/academics"
-              target="_blank"
-              rel="noopener noreferrer"
-              style="text-decoration: none; color: inherit"
-            >
-              <div class="button-certificate">
-                <button type="button">Learn More About WPI</button>
-              </div>
+      <!-- Social icons -->
+      <div class="socials">
+        <ul class="social-icons">
+          <li>
+            <a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/tran-minh-duc-nguyen/"
+              target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
             </a>
-          </div>
-        </div>
-        <div class="box achievement">
-          <div class="achievement-image">
-            <img
-              draggable="false"
-              src="./assets/images/education/Azure.png"
-              alt=""
-              style="width: 250px; height: 250px"
-            />
-          </div>
-          <div class="content">
-            <h3>Azure Fundamentals</h3>
-            <h4>Pursuing</h4>
-            <!-- <a href="" style="text-decoration: none; color: inherit"> -->
-            <div class="button-certificate">
-              <button type="button">Soon available</button>
-            </div>
-            <!-- </a> -->
-          </div>
-        </div>
-        <div class="box achievement">
-          <div class="achievement-image">
-            <img
-              draggable="false"
-              src="./assets/images/education/AWS.png"
-              alt=""
-              style="width: 250px; height: 250px"
-            />
-          </div>
-          <div class="content">
-            <h3>AWS Cloud Practitioner</h3>
-            <h4>Pursuing</h4>
-            <!-- <a href="" style="text-decoration: none; color: inherit"> -->
-            <div class="button-certificate">
-              <button type="button">Soon available</button>
-            </div>
-            <!-- </a> -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- education section ends -->
-
-    <!-- skills section starts -->
-    <section class="skills" id="skills">
-      <div class="container">
-        <h2 class="heading">
-          <i class="fas fa-laptop-code"></i> Skills & Tech Stacks
-        </h2>
-        <div class="skills-table">
-          <div class="skills-row">
-            <div class="skills-category">Programming Languages</div>
-            <div class="skills-items">
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                  alt="Python"
-                />
-                <span>Python</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-                  alt="Java"
-                />
-                <span>Java</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg"
-                />
-                <span>C++</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"
-                />
-                <span>JavaScript</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-plain.svg"
-                />
-                <span>SQL</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skills-row">
-            <div class="skills-category">Frameworks</div>
-            <div class="skills-items">
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
-                />
-                <span>FastAPI</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
-                />
-                <span>Flask</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skills-row">
-            <div class="skills-category">Web Development</div>
-            <div class="skills-items">
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg"
-                />
-                <span>HTML</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg"
-                />
-                <span>CSS</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                  alt="React"
-                />
-                <span>React</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg"
-                />
-                <span>PostgreSQL</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg"
-                />
-                <span>RabbitMQ</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-plain.svg"
-                />
-                <span>SQLAlchemy</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="skills-row">
-            <div class="skills-category">Cloud & DevOps</div>
-            <div class="skills-items">
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-                  alt="Azure"
-                />
-                <span>Azure</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
-                />
-                <span>AWS</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg"
-                />
-                <span>Docker</span>
-              </div>
-              <div class="skill-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-plain.svg"
-                />
-                <span>Linux</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- skills section ends -->
-    <!-- project section starts -->
-    <section class="project" id="project">
-      <h2 class="heading"><i class="fas fa-folder"></i> Projects</h2>
-
-      <div class="box-container">
-        <div class="projects-carousel">
-          <button class="carousel-nav prev" id="prevBtn">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <div class="projects-track" id="projectsTrack">
-            <!-- Projects will be dynamically loaded here -->
-          </div>
-          <button class="carousel-nav next" id="nextBtn">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-        <div class="carousel-indicators" id="carouselIndicators">
-          <!-- Indicators will be dynamically generated -->
-        </div>
-      </div>
-    </section>
-    <!-- project section ends -->
-
-    <!-- experience section starts -->
-    <section class="experience" id="experience">
-      <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
-
-      <div class="timeline">
-        <div class="container right" data-company="cso">
-          <div class="content">
-            <img
-              src="./assets/images/logo/CSO.png"
-              alt="Cambridge City, Massachusetts"
-            />
-            <div>
-              <div class="tag">
-                <h2>Cambridge City, Massachusetts</h2>
-              </div>
-              <div class="desc">
-                <h3>Web Developer</h3>
-                <p>March 2025 - Present</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container left" data-company="hitachi">
-          <div class="content">
-            <img
-              src="./assets/images/logo/Hitachi.png"
-              alt="Hitachi Digital Service Vietnam"
-            />
-            <div>
-              <div class="tag">
-                <h2>Hitachi Digital Service Vietnam</h2>
-              </div>
-              <div class="desc">
-                <h3>Backend Developer | Intern</h3>
-                <p>May 2025 - August 2025</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="container right" data-company="wpi">
-          <div class="content">
-            <img
-              src="./assets/images/logo/WPI_logo.png"
-              alt="Worcester Polytechnic Institute"
-            />
-            <div>
-              <div class="tag">
-                <h2>Worcester Polytechnic Institute</h2>
-              </div>
-              <div class="desc">
-                <h3>Researcher</h3>
-                <p>May 2024 - August 2024</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- experience section ends -->
-
-    <!-- contact section starts -->
-    <section class="contact" id="contact">
-      <h2 class="heading"><i class="fas fa-headset"></i> Get in Touch</h2>
-
-      <div class="container">
-        <div class="content">
-          <div class="image-box">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.217785264388!2d-71.80789868454313!3d42.27455597919353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e406e7b2e2c7b9%3A0x7e6e6e7e7e7e7e7e!2sWorcester%20Polytechnic%20Institute!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
-              width="100%"
-              height="250"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <form id="contact-form">
-            <div class="form-group">
-              <div class="field">
-                <input type="text" name="name" placeholder="Name" required />
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="field">
-                <input type="text" name="email" placeholder="Email" required />
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="field">
-                <input type="text" name="phone" placeholder="Phone" />
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="message">
-                <textarea
-                  placeholder="Message"
-                  name="message"
-                  required
-                ></textarea>
-                <i class="fas fa-comment-dots"></i>
-              </div>
-            </div>
-            <div class="button-area">
-              <button type="submit">
-                Submit <i class="fa fa-paper-plane"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-    <!-- contact section ends -->
-
-    <!-- scroll top btn -->
-    <a
-      href="#home"
-      aria-label="ScrollTop"
-      class="fas fa-angle-up"
-      id="scroll-top"
-    ></a>
-    <!-- scroll back to top -->
-
-    <!-- GSAP for animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <!-- jquery cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-- typed.js cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
-      integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-- vanilla tilt.js links -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
-      integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-- scroll reveal anim -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-
-    <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-    <!-- Experience Modal -->
-    <div id="experienceModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div>
-            <h2 id="modalCompanyName"></h2>
-            <div class="position" id="modalPosition"></div>
-          </div>
-          <span class="close">&times;</span>
-        </div>
-        <div class="modal-body" id="modalBody">
-          <!-- Content will be dynamically inserted here -->
-        </div>
+          </li>
+          <li>
+            <a class="github" aria-label="GitHub" href="https://github.com/samnguyen3115" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a class="email" aria-label="Email" href="mailto:ducsam.work@gmail.com" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a class="phone" aria-label="Phone" href="tel:+15083738550" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-phone"></i>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
 
-    <script src="./assets/js/script.js"></script>
-  </body>
+    <!-- Image -->
+    <div class="image">
+      <div class="computer-frame">
+        <div class="computer-screen">
+          <div class="screen-content old-tv-container">
+            <div class="tv-image" style="background-image: url('./assets/images/profile/profile1.jpeg')"></div>
+            <div class="tv-effect">
+              <div class="scan-lines"></div>
+              <div class="noise"></div>
+              <div class="tv-flicker"></div>
+            </div>
+            <div class="screen-glare"></div>
+          </div>
+        </div>
+        <div class="computer-base">
+          <div class="base-front"></div>
+        </div>
+      </div>
+  </section>
+
+  <!-- hero section ends -->
+  <!-- education section starts -->
+  <section class="education" id="education">
+    <h1 class="heading">
+      <i class="fas fa-graduation-cap"></i> Education and Certifications
+    </h1>
+
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img draggable="false" src="./assets/images/logo/WPI.png" alt="" style="width: 300px" />
+        </div>
+        <div class="content">
+          <h3>Master & Bachelor of Engineering in Computer Science</h3>
+          <p>Worcester Polytechnic Institute | WPI</p>
+          <h4>2023-2027 | Pursuing</h4>
+          <a href="https://www.wpi.edu/academics" target="_blank" rel="noopener noreferrer"
+            style="text-decoration: none; color: inherit">
+            <div class="button-certificate">
+              <button type="button">Learn More About WPI</button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- education section ends -->
+
+  <!-- skills section starts -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="heading">
+        <i class="fas fa-laptop-code"></i> Skills & Tech Stacks
+      </h2>
+      <div class="skills-table">
+        <div class="skills-row">
+          <div class="skills-category">Programming Languages</div>
+          <div class="skills-items">
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" />
+              <span>Java</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg" />
+              <span>C++</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                alt="C#" />
+              <span>C#</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-plain.svg" />
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-row">
+          <div class="skills-category">Frameworks</div>
+          <div class="skills-items">
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                alt="React" />
+              <span>React</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                alt="Angular" />
+              <span>Angular</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" />
+              <span>FastAPI</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" />
+              <span>Flask</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-row">
+          <div class="skills-category">Web Development</div>
+          <div class="skills-items">
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg" />
+              <span>HTML</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg" />
+              <span>CSS</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg" />
+              <span>PostgreSQL</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg" />
+              <span>RabbitMQ</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-plain.svg" />
+              <span>SQLAlchemy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-row">
+          <div class="skills-category">Cloud & DevOps</div>
+          <div class="skills-items">
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" />
+              <span>Azure</span>
+            </div>
+            <div class="skill-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" />
+              <span>AWS</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg" />
+              <span>Docker</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-plain.svg" />
+              <span>Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- skills section ends -->
+  <!-- project section starts -->
+  <section class="project" id="project">
+    <h2 class="heading"><i class="fas fa-folder"></i> Projects</h2>
+
+    <div class="box-container">
+      <div class="projects-carousel">
+        <button class="carousel-nav prev" id="prevBtn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="projects-track" id="projectsTrack">
+          <!-- Projects will be dynamically loaded here -->
+        </div>
+        <button class="carousel-nav next" id="nextBtn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="carousel-indicators" id="carouselIndicators">
+        <!-- Indicators will be dynamically generated -->
+      </div>
+    </div>
+  </section>
+  <!-- project section ends -->
+
+  <!-- experience section starts -->
+  <section class="experience" id="experience">
+    <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
+
+    <div class="timeline">
+      <div class="container right" data-company="robot-whisperer">
+        <div class="content">
+          <img src="./assets/images/logo/robot_whisperer.png" alt="The Robot Whisperer LLC" />
+          <div>
+            <div class="tag">
+              <h2>The Robot Whisperer LLC</h2>
+            </div>
+            <div class="desc">
+              <h3>Software Engineer Intern</h3>
+              <p>January 2026 - June 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container left" data-company="cso">
+        <div class="content">
+          <img src="./assets/images/logo/CSO.png" alt="Cambridge City, Massachusetts" />
+          <div>
+            <div class="tag">
+              <h2>Cambridge City, Massachusetts</h2>
+            </div>
+            <div class="desc">
+              <h3>Web Developer</h3>
+              <p>March 2025 - Present</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container right" data-company="hitachi">
+        <div class="content">
+          <img src="./assets/images/logo/Hitachi.png" alt="Hitachi Digital Service Vietnam" />
+          <div>
+            <div class="tag">
+              <h2>Hitachi Digital Service Vietnam</h2>
+            </div>
+            <div class="desc">
+              <h3>Backend Developer | Intern</h3>
+              <p>May 2025 - August 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container left" data-company="wpi">
+        <div class="content">
+          <img src="./assets/images/logo/WPI_logo.png" alt="Worcester Polytechnic Institute" />
+          <div>
+            <div class="tag">
+              <h2>Worcester Polytechnic Institute</h2>
+            </div>
+            <div class="desc">
+              <h3>Researcher</h3>
+              <p>May 2024 - August 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- experience section ends -->
+
+  <!-- contact section starts -->
+  <section class="contact" id="contact">
+    <h2 class="heading"><i class="fas fa-headset"></i> Get in Touch</h2>
+
+    <div class="container">
+      <div class="content">
+        <div class="image-box">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.217785264388!2d-71.80789868454313!3d42.27455597919353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e406e7b2e2c7b9%3A0x7e6e6e7e7e7e7e7e!2sWorcester%20Polytechnic%20Institute!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+            width="100%" height="250" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <form id="contact-form">
+          <div class="form-group">
+            <div class="field">
+              <input type="text" name="name" placeholder="Name" required />
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="field">
+              <input type="text" name="email" placeholder="Email" required />
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="field">
+              <input type="text" name="phone" placeholder="Phone" />
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="message">
+              <textarea placeholder="Message" name="message" required></textarea>
+              <i class="fas fa-comment-dots"></i>
+            </div>
+          </div>
+          <div class="button-area">
+            <button type="submit">
+              Submit <i class="fa fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- contact section ends -->
+
+  <!-- scroll top btn -->
+  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+  <!-- scroll back to top -->
+
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- typed.js cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
+    integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- vanilla tilt.js links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+    integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- scroll reveal anim -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+  <!-- Experience Modal -->
+  <div id="experienceModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h2 id="modalCompanyName"></h2>
+          <div class="position" id="modalPosition"></div>
+        </div>
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Content will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
 <!-- Google tag (gtag.js) -->
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-JHJ6CFJVCC"
-></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JHJ6CFJVCC"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -591,5 +462,3 @@
 
   gtag("config", "G-JHJ6CFJVCC");
 </script>
-
-

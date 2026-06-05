@@ -30,6 +30,11 @@
   filter: invert(1);
 }
 
+/* Make Robot Whisperer logo black and white */
+.experience .container[data-company="robot-whisperer"] img {
+  filter: grayscale(1);
+}
+
 .experience .tag {
   flex: 1;
   min-width: 0;

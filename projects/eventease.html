@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventEase | Project Details</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/shared.css" />
+  <link rel="stylesheet" href="../assets/css/project-detail.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- navbar starts -->
+  <header>
+    <div class="navbar-left">
+      <a href="../" class="logo"><i class="fab fa-python"></i> sam</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <div class="navbar-controls">
+      <div id="menu" class="fas fa-bars"></div>
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#education">Education</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#project" class="active">Projects</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- navbar ends -->
+
+  <main class="project-detail-container">
+    <!-- Header Banner -->
+    <div class="project-detail-header">
+      <div class="project-title-area">
+        <h1>EventEase</h1>
+        <div class="project-subtitle">AI-Powered Intelligent Event & Task Planner</div>
+      </div>
+      <button class="back-btn" onclick="window.location.href='../index.html#project'">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </button>
+    </div>
+
+    <!-- Main Layout Grid -->
+    <div class="project-grid">
+      <!-- Left Side: Project details -->
+      <div class="project-main-content">
+        <!-- Overview Card -->
+        <div class="project-card">
+          <h2>About the Project</h2>
+          <p>
+            EventEase is an intelligent, AI-powered event management and task orchestration platform designed to
+            simplify complex planning processes. Built with Flask and powered by Google's Gemini AI, it helps users
+            automatically break down descriptions of events into actionable, contextual checklists.
+          </p>
+          <p>
+            Planning large events—like conferences, parties, or meetups—involves dozens of hidden details. EventEase
+            removes the guesswork by using generative AI to construct smart, customized checklists in real time. It also
+            features computer vision integrations to verify task completion and collaborative workflows for multi-user
+            coordination.
+          </p>
+        </div>
+
+        <!-- Features Card -->
+        <div class="project-card">
+          <h2>Key Features</h2>
+          <ul class="project-list">
+            <li><strong>AI-Powered Task Generation</strong> - Natural language conversational interface (via Google
+              Gemini) that parses event parameters to generate tailored lists of tasks.</li>
+            <li><strong>Computer Vision Verification</strong> - Integrates with Salesforce BLIP model to analyze
+              user-uploaded photos for automated task verification.</li>
+            <li><strong>Real-time Collaboration</strong> - Multi-user planning workspace with role-based access and
+              automated mail notifications for team invitations.</li>
+            <li><strong>Dynamic Progress Dashboard</strong> - Visual progress bars, analytics, and task tracking
+              interfaces built using Bootstrap 5.</li>
+            <li><strong>Calendar Integration</strong> - Seamless export to Apple, Google, and Outlook calendars via
+              standardized ICS files.</li>
+            <li><strong>Multi-language Support</strong> - Built-in translation module to translate planning tasks
+              dynamically for international teams.</li>
+          </ul>
+        </div>
+
+        <!-- Project Media Card -->
+        <div class="project-card">
+          <h2>Project Media</h2>
+          <div style="display: flex; flex-direction: column; gap: 3rem;">
+            <div style="border: 2px solid var(--border-primary); padding: 15px; background: var(--bg-primary);">
+              <img src="../assets/images/projects/eventease_screenshot.png" alt="EventEase Dashboard"
+                style="width: 100%; height: auto; border: 1px solid var(--border-primary); display: block;" />
+              <div
+                style="margin-top: 12px; font-size: 1.5rem; font-family: 'JetBrains Mono', monospace; text-align: center; font-weight: bold;">
+                Main Application Dashboard</div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+              <div style="border: 2px solid var(--border-primary); padding: 10px; background: var(--bg-primary);">
+                <img src="../assets/images/projects/chatbot.png" alt="Gemini AI Chatbot Assistant"
+                  style="width: 100%; height: auto; border: 1px solid var(--border-primary); display: block;" />
+                <div
+                  style="margin-top: 8px; font-size: 1.3rem; font-family: 'JetBrains Mono', monospace; text-align: center;">
+                  AI Conversational Interface</div>
+              </div>
+              <div style="border: 2px solid var(--border-primary); padding: 10px; background: var(--bg-primary);">
+                <img src="../assets/images/projects/verify.png" alt="BLIP Image Task Verification"
+                  style="width: 100%; height: auto; border: 1px solid var(--border-primary); display: block;" />
+                <div
+                  style="margin-top: 8px; font-size: 1.3rem; font-family: 'JetBrains Mono', monospace; text-align: center;">
+                  BLIP Computer Vision Verification</div>
+              </div>
+            </div>
+            <div
+              style="border: 2px solid var(--border-primary); padding: 15px; background: var(--bg-primary); text-align: center;">
+              <img src="../assets/images/projects/eventease.png" alt="EventEase Logo"
+                style="max-width: 300px; width: 100%; height: auto; border: 1px solid var(--border-primary); display: inline-block;" />
+              <div
+                style="margin-top: 12px; font-size: 1.5rem; font-family: 'JetBrains Mono', monospace; text-align: center; font-weight: bold;">
+                Official Logo Branding</div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Right Side: Sidebar Metadata & Tech Stack -->
+        <div class="project-sidebar">
+          <!-- Tech Stack Card -->
+          <div class="project-card">
+            <h2>Tech Stack</h2>
+            <div class="tech-grid">
+              <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+              <span class="tech-badge"><i class="fas fa-fire"></i> Flask</span>
+              <span class="tech-badge"><i class="fas fa-robot"></i> Google Gemini AI</span>
+              <span class="tech-badge"><i class="fas fa-eye"></i> Salesforce BLIP</span>
+              <span class="tech-badge"><i class="fas fa-database"></i> PostgreSQL / SQLite</span>
+              <span class="tech-badge"><i class="fas fa-cubes"></i> SQLAlchemy</span>
+              <span class="tech-badge"><i class="fab fa-bootstrap"></i> Bootstrap 5</span>
+              <span class="tech-badge"><i class="fab fa-js-square"></i> JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Project Stats Card -->
+          <div class="project-card">
+            <h2>Project Metadata</h2>
+            <table class="meta-info-table">
+              <tr>
+                <td>Category</td>
+                <td>AI & Web Application</td>
+              </tr>
+              <tr>
+                <td>AI Integration</td>
+                <td>Google Gemini Pro API</td>
+              </tr>
+              <tr>
+                <td>CV Model</td>
+                <td>Salesforce BLIP</td>
+              </tr>
+              <tr>
+                <td>Repository</td>
+                <td>Open Source</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Action Buttons Card -->
+          <div class="project-card">
+            <h2>Links</h2>
+            <div class="project-actions">
+              <a href="https://github.com/samnguyen3115/eventease" target="_blank" class="action-btn primary">
+                <i class="fab fa-github"></i> Repository
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <!-- Theme management script -->
+  <script>
+    // Theme toggling functionality
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Initialize theme on page load
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    themeToggle.addEventListener('click', function () {
+      const activeTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
+
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Mobile Menu functionality
+    const menuBtn = document.getElementById('menu');
+    const navbar = document.querySelector('.navbar');
+
+    menuBtn.addEventListener('click', function () {
+      this.classList.toggle('fa-times');
+      navbar.classList.toggle('nav-toggle');
+    });
+
+    // Close menu on navigation
+    document.querySelectorAll('.navbar ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuBtn.classList.remove('fa-times');
+        navbar.classList.remove('nav-toggle');
+      });
+    });
+  </script>
+</body>
+
+</html>
